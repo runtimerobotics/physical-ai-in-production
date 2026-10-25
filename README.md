@@ -1,6 +1,6 @@
 # Physical AI in Production
 
-A 27-slide industry briefing (October 2026): where robot foundation models are shipping today, where they're still in pilots, how to take a model to production, and what to watch next.
+A 30-slide industry briefing (October 2026): where robot foundation models are shipping today, where they're still in pilots, how to take a model to production, and what to watch next.
 
 By **Lentin Joseph**, CEO of RUNTIME Robotics and author of 11 books on ROS and robotics.
 
@@ -14,8 +14,8 @@ Navigate with the arrow keys, the buttons at the bottom, or by swiping. Link to 
 2. The models powering real robots (π0.6, DeepFleet, DYNA, Helix, Skild, GR00T, Gemini Robotics, Dream-1), plus a Dream Labs Robot Playground demo
 3. Deployments: production, humanoid pilots, videos, and home robots
 4. Business models, the enabling layer, and why it's harder than chatbots
-5. Taking a model to production: the production loop, spec and data, build vs. fine-tune vs. API, the evaluation ladder, layered safety architecture, on-robot deployment, staged rollouts and the data flywheel, and a readiness checklist
-6. Outlook, takeaways, and sources
+5. Taking a model to production: the production loop, spec and data, build vs. fine-tune vs. API, the evaluation ladder, layered safety architecture, on-robot deployment, staged rollouts and the data flywheel, a ROS 2 reference architecture, and a readiness checklist
+6. Outlook, takeaways, how to get started, sources, and contact
 
 ## Notes
 
