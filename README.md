@@ -6,7 +6,7 @@ By **Lentin Joseph**, CEO of RUNTIME Robotics and author of 11 books on ROS and 
 
 **View it:** https://runtimerobotics.github.io/physical-ai-in-production/
 
-Navigate with the arrow keys, the buttons at the bottom, or by swiping. Link to a slide with `#n`, for example `#11` for the videos.
+Navigate with the arrow keys, the buttons at the bottom, or by swiping. Link to a slide with `#n`, for example `#12` for the videos.
 
 ## Contents
 
