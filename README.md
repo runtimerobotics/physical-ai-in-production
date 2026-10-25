@@ -1,6 +1,6 @@
 # Physical AI in Production
 
-An 18-slide industry briefing (October 2026): where robot foundation models are shipping today, where they're still in pilots, and what to watch next.
+A 26-slide industry briefing (October 2026): where robot foundation models are shipping today, where they're still in pilots, how to take a model to production, and what to watch next.
 
 **View it:** https://runtimerobotics.github.io/physical-ai-in-production/
 
@@ -12,7 +12,8 @@ Navigate with the arrow keys, the buttons at the bottom, or by swiping. Link to 
 2. The models powering real robots (π0.6, DeepFleet, DYNA, Helix, Skild, GR00T, Gemini Robotics, Dream-1)
 3. Deployments: production, humanoid pilots, videos, and home robots
 4. Business models, the enabling layer, and why it's harder than chatbots
-5. Outlook, takeaways, and sources
+5. Taking a model to production: the production loop, spec and data, build vs. fine-tune vs. API, the evaluation ladder, layered safety architecture, on-robot deployment, staged rollouts and the data flywheel, and a readiness checklist
+6. Outlook, takeaways, and sources
 
 ## Notes
 
