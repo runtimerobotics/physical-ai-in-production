@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Physical AI in Production</title>
+<meta name="description" content="Where robot foundation models are shipping today, and where they’re still in pilots. An industry briefing, October 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root { --bg: #070B10; --bar: #0E1621; --text: #F4F2EC; --muted: #9AAAB8; --accent: #F2994A; }
+* { box-sizing: border-box; margin: 0; }
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'IBM Plex Sans', Arial, sans-serif; overflow: hidden; }
+#stage { position: absolute; width: 1920px; height: 1080px; transform-origin: 0 0; }
+section { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; }
+/* Slides carry inline display:flex/grid, so hiding needs !important. */
+section:not(.current) { display: none !important; }
+section ul { padding-left: 1.2em; }
+section table { border-collapse: collapse; width: 100%; }
+section th, section td { padding: 0.35em 0.6em; text-align: left; vertical-align: top; border-bottom: 1px solid #D9D4C7; }
+section th { font-weight: 600; }
+section a { color: inherit; text-decoration: underline; text-underline-offset: 4px; }
+section a:focus-visible, nav button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+nav { position: fixed; left: 0; right: 0; bottom: 0; height: 56px; display: flex; align-items: center; justify-content: center; gap: 16px; background: var(--bar); border-top: 1px solid #2A3B4C; font-size: 15px; }
+nav button { font: inherit; color: var(--text); background: transparent; border: 1px solid #3E5163; border-radius: 8px; min-width: 44px; height: 40px; padding: 0 14px; cursor: pointer; }
+nav button:hover { border-color: var(--accent); }
+nav button:disabled { opacity: 0.35; cursor: default; }
+#count { min-width: 72px; text-align: center; color: var(--muted); font-variant-numeric: tabular-nums; }
+.hint { color: var(--muted); }
+@media (max-width: 640px) { .hint { display: none; } }
+</style>
+</head>
+<body>
+<main id="stage" aria-live="polite">
+<section id="cover" style="background:#0E1621;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:end;gap:40px">
+<svg aria-label="" viewBox="0 0 640 640" width="640" height="640" style="position:absolute;left:1152px;top:128px;width:640px;height:640px"><g fill="none" stroke="#2A3B4C" stroke-width="2"><circle cx="320" cy="320" r="90"/><circle cx="320" cy="320" r="170"/><circle cx="320" cy="320" r="250"/><circle cx="320" cy="320" r="315"/><line x1="0" y1="320" x2="640" y2="320"/><line x1="320" y1="0" x2="320" y2="640"/></g><g stroke="#F2994A" stroke-width="3" fill="none"><path d="M320 320 L440 200 L540 260"/><path d="M320 320 L200 470"/></g><circle cx="320" cy="320" r="18" fill="#F2994A"/><circle cx="440" cy="200" r="11" fill="#F2994A"/><circle cx="540" cy="260" r="11" fill="#7FB7BE"/><circle cx="200" cy="470" r="11" fill="#7FB7BE"/><circle cx="150" cy="90" r="7" fill="#3E5163"/><circle cx="560" cy="520" r="7" fill="#3E5163"/></svg>
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#F2994A">Industry briefing · October 2026</p>
+<h1 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:120px;font-weight:600;line-height:1.05;width:1000px;color:#F4F2EC">Physical AI<br>in Production</h1>
+<p style="font-size:44px;line-height:1.3;width:980px;color:#B8C4CF">Where robot foundation models are shipping today, and where they’re still in pilots</p>
+</section>
+
+<section id="agenda" style="background:#E9E5DA;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#A04A0D">Agenda</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">What we’ll cover</h2>
+</div>
+<div style="display:flex;flex-direction:column">
+<div style="display:flex;flex-direction:row;gap:40px;align-items:baseline;border-top:1px solid #B9B2A2;padding:22px 0 22px 0">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;width:90px;color:#A04A0D">01</p>
+<p style="flex:1;font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:500;color:#0E1621">What Physical AI is, and how far it has come</p>
+<p style="width:260px;font-size:24px;text-align:right;color:#56616B">Slides 3–5</p>
+</div>
+<div style="display:flex;flex-direction:row;gap:40px;align-items:baseline;border-top:1px solid #B9B2A2;padding:22px 0 22px 0">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;width:90px;color:#A04A0D">02</p>
+<p style="flex:1;font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:500;color:#0E1621">The models powering real robots</p>
+<p style="width:260px;font-size:24px;text-align:right;color:#56616B">Slides 6–7</p>
+</div>
+<div style="display:flex;flex-direction:row;gap:40px;align-items:baseline;border-top:1px solid #B9B2A2;padding:22px 0 22px 0">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;width:90px;color:#A04A0D">03</p>
+<p style="flex:1;font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:500;color:#0E1621">Deployments: production, pilots and the home</p>
+<p style="width:260px;font-size:24px;text-align:right;color:#56616B">Slides 8–12</p>
+</div>
+<div style="display:flex;flex-direction:row;gap:40px;align-items:baseline;border-top:1px solid #B9B2A2;padding:22px 0 22px 0">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;width:90px;color:#A04A0D">04</p>
+<p style="flex:1;font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:500;color:#0E1621">Business models, enablers and hard problems</p>
+<p style="width:260px;font-size:24px;text-align:right;color:#56616B">Slides 13–15</p>
+</div>
+<div style="display:flex;flex-direction:row;gap:40px;align-items:baseline;border-top:1px solid #B9B2A2;border-bottom:1px solid #B9B2A2;padding:22px 0 22px 0">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;width:90px;color:#A04A0D">05</p>
+<p style="flex:1;font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:500;color:#0E1621">Outlook and key takeaways</p>
+<p style="width:260px;font-size:24px;text-align:right;color:#56616B">Slides 16–18</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#56616B">Physical AI in Production · October 2026</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#56616B;text-align:right">02</p>
+</section>
+
+<section id="define" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">The concept</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">What “Physical AI” means</h2>
+</div>
+<p style="font-size:44px;line-height:1.25;width:1560px;color:#3D4A57">AI models that perceive, reason about and act in the physical world, <span style="color:#0E1621">learning behaviors from data</span> instead of being hand-programmed for each task.</p>
+<div style="display:flex;flex-direction:row;align-items:center;gap:24px">
+<div style="flex:1;align-self:stretch;display:flex;flex-direction:column;gap:16px;background:#FBFAF6;border:1px solid #D9D4C7;border-radius:16px;padding:40px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;color:#0E1621">Sense</h3>
+<p style="font-size:28px;line-height:1.4;color:#3D4A57">Cameras, depth, lidar, force and touch sensors</p>
+</div>
+<svg aria-hidden="true" viewBox="0 0 100 50" preserveAspectRatio="none" style="flex:none;width:56px;height:28px"><polygon fill="#B4530F" points="0,15 60,15 60,0 100,25 60,50 60,35 0,35"/></svg>
+<div style="flex:1;align-self:stretch;display:flex;flex-direction:column;gap:16px;background:#FBFAF6;border:1px solid #D9D4C7;border-radius:16px;padding:40px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;color:#0E1621">Reason</h3>
+<p style="font-size:28px;line-height:1.4;color:#3D4A57">VLA models, world models and fleet models</p>
+</div>
+<svg aria-hidden="true" viewBox="0 0 100 50" preserveAspectRatio="none" style="flex:none;width:56px;height:28px"><polygon fill="#B4530F" points="0,15 60,15 60,0 100,25 60,50 60,35 0,35"/></svg>
+<div style="flex:1;align-self:stretch;display:flex;flex-direction:column;gap:16px;background:#FBFAF6;border:1px solid #D9D4C7;border-radius:16px;padding:40px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;color:#0E1621">Act</h3>
+<p style="font-size:28px;line-height:1.4;color:#3D4A57">Real-time commands for arms, legs, wheels and grippers</p>
+</div>
+<svg aria-hidden="true" viewBox="0 0 100 50" preserveAspectRatio="none" style="flex:none;width:56px;height:28px"><polygon fill="#B4530F" points="0,15 60,15 60,0 100,25 60,50 60,35 0,35"/></svg>
+<div style="flex:1;align-self:stretch;display:flex;flex-direction:column;gap:16px;background:#FBFAF6;border:1px solid #D9D4C7;border-radius:16px;padding:40px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;color:#0E1621">Improve</h3>
+<p style="font-size:28px;line-height:1.4;color:#3D4A57">Teleoperation, simulation, synthetic video and fleet logs feed retraining</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#5F6B76">Physical AI in Production · October 2026</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">03</p>
+</section>
+
+<section id="maturity" style="background:#0E1621;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#F2994A">Maturity check</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#F4F2EC">Three levels of maturity</h2>
+</div>
+<div style="display:flex;flex-direction:row;gap:48px">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:8px solid #F2994A;padding:32px 0 0 0">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#F2994A">1 · In production</p>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#F4F2EC">Warehouses, logistics and robotaxis</h3>
+<p style="font-size:24px;line-height:1.5;color:#B8C4CF">Amazon, Agility × GXO, Ultra, Dyna Robotics, Waymo</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:8px solid #7FB7BE;padding:32px 0 0 0">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#7FB7BE">2 · Paid pilots</p>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#F4F2EC">Humanoids in factories</h3>
+<p style="font-size:24px;line-height:1.5;color:#B8C4CF">Figure × BMW, Atlas × Hyundai, Apptronik, Hexagon AEON, Skild × Foxconn</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:8px solid #5B6B7A;padding:32px 0 0 0">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#9AAAB8">3 · Announced</p>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#F4F2EC">Robots in the home</h3>
+<p style="font-size:24px;line-height:1.5;color:#B8C4CF">1X NEO is on pre-order; no confirmed volume deliveries yet</p>
+</div>
+</div>
+<p style="font-size:32px;line-height:1.4;width:1400px;color:#F4F2EC">The more structured the environment, the further along the deployment.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#8A9AA8">Physical AI in Production · October 2026</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">04</p>
+</section>
+
+<section id="timeline" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">How we got here</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">From pilots to paid work, 2024–2026</h2>
+</div>
+<div style="display:flex;flex-direction:row">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:6px solid #0E1621;padding:28px 28px 0 0">
+<p style="font-size:24px;font-weight:600;color:#B4530F">Jun 2024</p>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Agility × GXO</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">First multi-year humanoid robots-as-a-service deal</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:6px solid #0E1621;padding:28px 28px 0 0">
+<p style="font-size:24px;font-weight:600;color:#B4530F">Apr 2025</p>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">DYNA-1</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">Dyna unveils a robot model built for commercial uptime</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:6px solid #0E1621;padding:28px 28px 0 0">
+<p style="font-size:24px;font-weight:600;color:#B4530F">Jul 2025</p>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Amazon DeepFleet</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">Fleet model launches as Amazon passes 1M robots</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:6px solid #0E1621;padding:28px 28px 0 0">
+<p style="font-size:24px;font-weight:600;color:#B4530F">Nov 2025</p>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">π*0.6</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">A VLA that learns from real-world experience</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:6px solid #0E1621;padding:28px 28px 0 0">
+<p style="font-size:24px;font-weight:600;color:#B4530F">Mar 2026</p>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">NVIDIA GTC</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">Partner wave: KION, Foxconn, Skild, Data Factory</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:6px solid #F2994A;padding:28px 0 0 0">
+<p style="font-size:24px;font-weight:600;color:#B4530F">Mid-2026</p>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Figure 03 at BMW</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">Humanoid at work on the Spartanburg plant floor</p>
+</div>
+</div>
+<p style="font-size:32px;line-height:1.4;width:1500px;color:#3D4A57">In about two years, Physical AI went from first commercial contracts to <span style="color:#0E1621">fleet-scale use in warehouses</span> and humanoids on factory floors.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#5F6B76">Physical AI in Production · October 2026</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">05</p>
+</section>
+
+<section id="models" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">The model landscape</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Models powering real robots</h2>
+</div>
+<table style="font-family:'IBM Plex Sans', Arial, sans-serif;font-size:26px;color:#0E1621;border:1px solid #D9D4C7">
+<tr style="background:#0E1621"><th style="width:16%;color:#F4F2EC">Model</th><th style="width:21%;color:#F4F2EC">Company</th><th style="width:26%;color:#F4F2EC">What it is</th><th style="width:12%;color:#F4F2EC">Stage</th><th style="width:25%;color:#F4F2EC">Where</th></tr>
+<tr style="background:#FBFAF6"><td>π0 → π0.6</td><td>Physical Intelligence</td><td>Licensed VLA for many robots</td><td style="color:#A04A0D">LIVE</td><td>Ultra order packing</td></tr>
+<tr style="background:#ECE8DD"><td>DeepFleet</td><td>Amazon</td><td>Fleet coordination model</td><td style="color:#A04A0D">LIVE</td><td>1M+ Amazon robots</td></tr>
+<tr style="background:#FBFAF6"><td>DYNA-1 / DYNA-2</td><td>Dyna Robotics</td><td>Dual-arm manipulation model</td><td style="color:#A04A0D">LIVE</td><td>Service businesses</td></tr>
+<tr style="background:#ECE8DD"><td>Helix</td><td>Figure AI</td><td>Onboard humanoid VLA</td><td style="color:#22646B">PILOT</td><td>BMW Spartanburg</td></tr>
+<tr style="background:#FBFAF6"><td>Skild Brain</td><td>Skild AI</td><td>General-purpose robot brain</td><td style="color:#22646B">PILOT</td><td>Foxconn assembly lines</td></tr>
+<tr style="background:#ECE8DD"><td>GR00T N + Cosmos</td><td>NVIDIA</td><td>Open VLA + world models</td><td style="color:#4A5560">PLATFORM</td><td>Partner training and simulation</td></tr>
+<tr style="background:#FBFAF6"><td>Gemini Robotics ER 2</td><td>Google DeepMind</td><td>Planner over lower-level VLAs</td><td style="color:#4A5560">PREVIEW</td><td>Public API; enterprise preview</td></tr>
+<tr style="background:#ECE8DD"><td>Dream-1</td><td>Dream Labs</td><td>Cross-robot brain via API</td><td style="color:#4A5560">PLATFORM</td><td>Dream API and playground</td></tr>
+</table>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57"><b style="color:#A04A0D">LIVE</b> paid production use · <b style="color:#22646B">PILOT</b> paid trials with named customers · <b style="color:#4A5560">PLATFORM / PREVIEW</b> available to developers</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#5F6B76">Physical AI in Production · October 2026</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">06</p>
+</section>
+
+<section id="dreamlabs" style="background:#0E1621;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#F2994A">Spotlight · Robot brain as an API</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#F4F2EC">Dream Labs: one brain, many robots</h2>
+</div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:24px">
+<div style="flex:1;align-self:stretch;display:flex;flex-direction:column;gap:12px;background:#18242F;border:1px solid #2A3B4C;border-radius:16px;padding:36px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#9AAAB8">You send</p>
+<p style="font-size:32px;line-height:1.3;color:#F4F2EC">Camera images, robot state and a task</p>
+</div>
+<svg aria-hidden="true" viewBox="0 0 100 50" preserveAspectRatio="none" style="flex:none;width:56px;height:28px"><polygon fill="#F2994A" points="0,15 60,15 60,0 100,25 60,50 60,35 0,35"/></svg>
+<div style="flex:1;align-self:stretch;display:flex;flex-direction:column;gap:12px;background:#F2994A;border-radius:16px;padding:36px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#0E1621">Dream API</p>
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.1;color:#0E1621">Dream-1</p>
+</div>
+<svg aria-hidden="true" viewBox="0 0 100 50" preserveAspectRatio="none" style="flex:none;width:56px;height:28px"><polygon fill="#F2994A" points="0,15 60,15 60,0 100,25 60,50 60,35 0,35"/></svg>
+<div style="flex:1;align-self:stretch;display:flex;flex-direction:column;gap:12px;background:#18242F;border:1px solid #2A3B4C;border-radius:16px;padding:36px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#9AAAB8">You get</p>
+<p style="font-size:32px;line-height:1.3;color:#F4F2EC">Actions for your robot to execute</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:row;gap:48px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:2px solid #3E5163;padding:24px 0 0 0">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#F4F2EC">Works across robots</h3>
+<p style="font-size:28px;line-height:1.4;color:#B8C4CF">Runs on its own bimanual YAM and popular low-cost arms; a few hundred demos adapt it to a new body.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:2px solid #3E5163;padding:24px 0 0 0">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#F4F2EC">Zero-shot claims</h3>
+<p style="font-size:28px;line-height:1.4;color:#B8C4CF">The company says it handles new tasks and new scenes it has never seen.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:2px solid #3E5163;padding:24px 0 0 0">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#F4F2EC">Built for developers</h3>
+<p style="font-size:28px;line-height:1.4;color:#B8C4CF">API access, a remote Robot Playground and fine-tuning that returns a model ID.</p>
+</div>
+</div>
+<p style="font-size:32px;line-height:1.4;color:#F4F2EC"><b>Why it matters:</b> robot brains sold the way developers already buy LLMs. <a href="https://dreamlabs.ai/" target="_blank" rel="noopener">dreamlabs.ai</a></p>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#8A9AA8">Physical AI in Production · October 2026 · Source: Dream Labs</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">07</p>
+</section>
+
+<section id="production" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Level 1 · In production</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Shipping today</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:24px">
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #F2994A;border-radius:12px;padding:28px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Amazon Robotics</h3>
+<p style="font-size:24px;font-weight:600;color:#B4530F">Fleet and manipulation</p>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">DeepFleet coordinates 1M+ robots; Vulcan picks items with a sense of touch.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #F2994A;border-radius:12px;padding:28px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Agility Digit × GXO</h3>
+<p style="font-size:24px;font-weight:600;color:#B4530F">Logistics humanoid</p>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">Multi-year robots-as-a-service deal; moving totes in Georgia, reportedly 100k+.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #F2994A;border-radius:12px;padding:28px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Ultra</h3>
+<p style="font-size:24px;font-weight:600;color:#B4530F">E-commerce packing</p>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">Live order packing running Physical Intelligence’s π0.6 model.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #F2994A;border-radius:12px;padding:28px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Dyna Robotics</h3>
+<p style="font-size:24px;font-weight:600;color:#B4530F">Service robots</p>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">Folding, food prep and packaging, about 16 hours a day at hotels and laundromats.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #F2994A;border-radius:12px;padding:28px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">KION forklifts</h3>
+<p style="font-size:24px;font-weight:600;color:#B4530F">With NVIDIA and Accenture</p>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">Jetson-based autonomous forklifts for GXO, trained in warehouse digital twins.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #F2994A;border-radius:12px;padding:28px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Waymo</h3>
+<p style="font-size:24px;font-weight:600;color:#B4530F">Robotaxis</p>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">Driverless ride-hailing; the company describes an end-to-end foundation model.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#5F6B76">Physical AI in Production · October 2026</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">08</p>
+</section>
+
+<section id="amazon" style="background:#E9E5DA;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#A04A0D">Spotlight</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Amazon shows what scale looks like</h2>
+</div>
+<div style="display:flex;flex-direction:row;gap:48px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;border-top:2px solid #0E1621;padding:32px 0 0 0">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:120px;font-weight:600;line-height:1;color:#A04A0D">1M+</p>
+<p style="font-size:32px;line-height:1.4;color:#3D4A57">robots deployed across Amazon’s operations network</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;border-top:2px solid #0E1621;padding:32px 0 0 0">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:120px;font-weight:600;line-height:1;color:#A04A0D">~10%</p>
+<p style="font-size:32px;line-height:1.4;color:#3D4A57">expected gain in fleet travel efficiency from DeepFleet</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;border-top:2px solid #0E1621;padding:32px 0 0 0">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:120px;font-weight:600;line-height:1;color:#A04A0D">1st</p>
+<p style="font-size:32px;line-height:1.4;color:#3D4A57">Amazon robot with a sense of touch: Vulcan</p>
+</div>
+</div>
+<p style="font-size:32px;line-height:1.4;width:1500px;color:#0E1621"><b>Lesson:</b> foundation models pay off first where a company already owns huge amounts of its own robot data.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#56616B">Physical AI in Production · October 2026 · Source: Amazon</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#56616B;text-align:right">09</p>
+</section>
+
+<section id="pilots" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#2C6E75">Level 2 · Paid pilots</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Humanoids: long pilots in factories</h2>
+</div>
+<table style="font-family:'IBM Plex Sans', Arial, sans-serif;font-size:26px;color:#0E1621;border:1px solid #D9D4C7">
+<tr style="background:#0E1621"><th style="width:26%;color:#F4F2EC">Robot / model</th><th style="width:22%;color:#F4F2EC">Customer</th><th style="width:52%;color:#F4F2EC">Status</th></tr>
+<tr style="background:#FBFAF6"><td>Figure 03 + Helix</td><td>BMW</td><td>Material handling; ~11 months reported at Spartanburg, Leipzig announced</td></tr>
+<tr style="background:#ECE8DD"><td>Boston Dynamics Atlas</td><td>Hyundai</td><td>Pilot in Korea; 2026 production units reportedly committed</td></tr>
+<tr style="background:#FBFAF6"><td>Apptronik Apollo</td><td>Logistics customers</td><td>Logistics pilots</td></tr>
+<tr style="background:#ECE8DD"><td>Hexagon AEON</td><td>Schaeffler, BMW</td><td>Industrial pilots</td></tr>
+<tr style="background:#FBFAF6"><td>Skild AI</td><td>Foxconn</td><td>Precision assembly on NVIDIA Blackwell lines</td></tr>
+<tr style="background:#ECE8DD"><td>Tesla Optimus</td><td>Tesla (internal)</td><td>No external customer deployments recorded</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#5F6B76">Physical AI in Production · October 2026</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">10</p>
+</section>
+
+<section id="videos" style="background:#0E1621;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#F2994A">See it in action</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#F4F2EC">Physical AI on the job: four videos</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:24px">
+<div style="display:flex;flex-direction:row;gap:28px;align-items:start;background:#18242F;border:1px solid #2A3B4C;border-radius:16px;padding:24px">
+<a href="https://www.press.bmwgroup.com/global/video/detail/PF0010224/figure-03-at-bmw-group-plant-spartanburg" target="_blank" rel="noopener" aria-label="Watch on BMW PressClub: Figure 03 at BMW" style="flex:none;position:relative;display:flex;align-items:center;justify-content:center;width:400px;height:225px;background:linear-gradient(135deg, #22313F, #0B1118);border-radius:10px;text-decoration:none">
+<span style="width:88px;height:88px;display:flex;align-items:center;justify-content:center;background:#F2994A;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#0E1621;width:44px;height:44px"><polygon points="7,4 20,12 7,20" fill="currentColor" stroke="none"/></svg></span>
+<span style="position:absolute;left:12px;bottom:12px;white-space:nowrap;font-size:24px;font-weight:600;background:#F4F2EC;color:#0E1621;padding:2px 12px;border-radius:8px">Opens in new tab</span>
+</a>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#F4F2EC">Figure 03 at BMW</h3>
+<p style="font-size:24px;line-height:1.4;color:#B8C4CF">BMW’s footage of Figure 03 at Plant Spartanburg.</p>
+<p style="font-size:24px;font-weight:600;color:#F2994A"><a href="https://www.press.bmwgroup.com/global/video/detail/PF0010224/figure-03-at-bmw-group-plant-spartanburg" target="_blank" rel="noopener">Watch on BMW PressClub</a></p>
+</div>
+</div>
+<div style="display:flex;flex-direction:row;gap:28px;align-items:start;background:#18242F;border:1px solid #2A3B4C;border-radius:16px;padding:24px">
+<a href="https://www.pi.website/blog/pistar06" target="_blank" rel="noopener" aria-label="Watch on pi.website: π*0.6 makes espresso" style="flex:none;position:relative;display:flex;align-items:center;justify-content:center;width:400px;height:225px;background:linear-gradient(135deg, #22313F, #0B1118);border-radius:10px;text-decoration:none">
+<span style="width:88px;height:88px;display:flex;align-items:center;justify-content:center;background:#F2994A;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#0E1621;width:44px;height:44px"><polygon points="7,4 20,12 7,20" fill="currentColor" stroke="none"/></svg></span>
+<span style="position:absolute;left:12px;bottom:12px;white-space:nowrap;font-size:24px;font-weight:600;background:#F4F2EC;color:#0E1621;padding:2px 12px;border-radius:8px">Opens in new tab</span>
+</a>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#F4F2EC">π*0.6 makes espresso</h3>
+<p style="font-size:24px;line-height:1.4;color:#B8C4CF">One of its hours-long runs, without interruption.</p>
+<p style="font-size:24px;font-weight:600;color:#F2994A"><a href="https://www.pi.website/blog/pistar06" target="_blank" rel="noopener">Watch on pi.website</a></p>
+</div>
+</div>
+<div style="display:flex;flex-direction:row;gap:28px;align-items:start;background:#18242F;border:1px solid #2A3B4C;border-radius:16px;padding:24px">
+<a href="https://www.agilityrobotics.com/videos/digits-first-day-of-work-at-gxo" target="_blank" rel="noopener" aria-label="Watch on agilityrobotics.com: Digit’s first day at GXO" style="flex:none;position:relative;display:flex;align-items:center;justify-content:center;width:400px;height:225px;background:linear-gradient(135deg, #22313F, #0B1118);border-radius:10px;text-decoration:none">
+<span style="width:88px;height:88px;display:flex;align-items:center;justify-content:center;background:#F2994A;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#0E1621;width:44px;height:44px"><polygon points="7,4 20,12 7,20" fill="currentColor" stroke="none"/></svg></span>
+<span style="position:absolute;left:12px;bottom:12px;white-space:nowrap;font-size:24px;font-weight:600;background:#F4F2EC;color:#0E1621;padding:2px 12px;border-radius:8px">Opens in new tab</span>
+</a>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#F4F2EC">Digit’s first day at GXO</h3>
+<p style="font-size:24px;line-height:1.4;color:#B8C4CF">Moving totes in a live warehouse.</p>
+<p style="font-size:24px;font-weight:600;color:#F2994A"><a href="https://www.agilityrobotics.com/videos/digits-first-day-of-work-at-gxo" target="_blank" rel="noopener">Watch on agilityrobotics.com</a></p>
+</div>
+</div>
+<div style="display:flex;flex-direction:row;gap:28px;align-items:start;background:#18242F;border:1px solid #2A3B4C;border-radius:16px;padding:24px">
+<a href="https://www.cnbc.com/video/2025/05/07/meet-vulcan-the-first-amazon-robot-with-a-sense-of-touch.html" target="_blank" rel="noopener" aria-label="Watch on CNBC: Amazon Vulcan" style="flex:none;position:relative;display:flex;align-items:center;justify-content:center;width:400px;height:225px;background:linear-gradient(135deg, #22313F, #0B1118);border-radius:10px;text-decoration:none">
+<span style="width:88px;height:88px;display:flex;align-items:center;justify-content:center;background:#F2994A;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#0E1621;width:44px;height:44px"><polygon points="7,4 20,12 7,20" fill="currentColor" stroke="none"/></svg></span>
+<span style="position:absolute;left:12px;bottom:12px;white-space:nowrap;font-size:24px;font-weight:600;background:#F4F2EC;color:#0E1621;padding:2px 12px;border-radius:8px">Opens in new tab</span>
+</a>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#F4F2EC">Amazon Vulcan</h3>
+<p style="font-size:24px;line-height:1.4;color:#B8C4CF">The touch-sensing robot at work in Spokane.</p>
+<p style="font-size:24px;font-weight:600;color:#F2994A"><a href="https://www.cnbc.com/video/2025/05/07/meet-vulcan-the-first-amazon-robot-with-a-sense-of-touch.html" target="_blank" rel="noopener">Watch on CNBC</a></p>
+</div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#8A9AA8">Physical AI in Production · October 2026 · Videos open on their original sites</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">11</p>
+</section>
+
+<section id="consumer" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">Level 3 · Announced</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Home robots: announced, not yet delivered</h2>
+</div>
+<div style="display:flex;flex-direction:row;gap:24px;align-items:stretch">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FBFAF6;border:1px solid #D9D4C7;border-radius:16px;padding:44px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">1X NEO</h3>
+<p style="font-size:24px;font-weight:600;color:#B4530F">Home humanoid</p>
+<p style="font-size:28px;line-height:1.45;color:#3D4A57">Pre-orders open with a $200 deposit. Deliveries were promised for 2026; none confirmed yet.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FBFAF6;border:1px solid #D9D4C7;border-radius:16px;padding:44px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">Unitree G1</h3>
+<p style="font-size:24px;font-weight:600;color:#B4530F">Low-cost humanoid</p>
+<p style="font-size:28px;line-height:1.45;color:#3D4A57">Starts at $13,500. Sold mostly to research and development labs today.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#0E1621;border-radius:16px;padding:44px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#F4F2EC">Why homes are hardest</h3>
+<ul style="font-size:28px;line-height:1.45;color:#B8C4CF">
+<li>Unstructured, ever-changing spaces</li>
+<li>People, children and pets nearby</li>
+<li>Price must fit a household budget</li>
+</ul>
+</div>
+</div>
+<p style="font-size:32px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Watch for:</b> delivery numbers and reliability data from real homes, not demo videos.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#5F6B76">Physical AI in Production · October 2026</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">12</p>
+</section>
+
+<section id="business" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Market dynamics</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Two business models are forming</h2>
+</div>
+<div style="display:flex;flex-direction:row;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:24px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:8px solid #0E1621;border-radius:16px;padding:48px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">Build the whole robot</h3>
+<p style="font-size:32px;font-weight:600;line-height:1.3;color:#0E1621">Figure, Tesla, 1X, Dyna</p>
+<p style="font-size:28px;line-height:1.45;color:#3D4A57">Own the hardware, the model and the data loop. Tighter integration, but every robot is built in-house.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:8px solid #F2994A;border-radius:16px;padding:48px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">License the brain</h3>
+<p style="font-size:32px;font-weight:600;line-height:1.3;color:#0E1621">Physical Intelligence, Skild AI, NVIDIA GR00T, Dream Labs</p>
+<p style="font-size:28px;line-height:1.45;color:#3D4A57">One model across many robot makers. Scales faster, but depends on partners’ hardware and data.</p>
+</div>
+</div>
+<p style="font-size:32px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">How customers pay:</b> robots-as-a-service is common, as in Agility’s multi-year deal with GXO.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#5F6B76">Physical AI in Production · October 2026</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">13</p>
+</section>
+
+<section id="enablers" style="background:#E9E5DA;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#A04A0D">The enabling layer</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">What makes deployment possible</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:row;gap:32px;align-items:center">
+<div style="flex:none;width:88px;height:88px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:16px"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:48px;height:48px"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">Digital twins and simulation</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">NVIDIA Isaac and Omniverse; ABB, FANUC, Yaskawa and KUKA use them to commission lines virtually.</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:row;gap:32px;align-items:center">
+<div style="flex:none;width:88px;height:88px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:16px"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:48px;height:48px"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">Synthetic data</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">Cosmos world models generate training video; the Physical AI Data Factory runs on Azure and Nebius.</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:row;gap:32px;align-items:center">
+<div style="flex:none;width:88px;height:88px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:16px"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:48px;height:48px"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">Onboard compute</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">Models run on the robot itself, like Helix on embedded GPUs, so control never waits on the cloud.</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:row;gap:32px;align-items:center">
+<div style="flex:none;width:88px;height:88px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:16px"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:48px;height:48px"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a6 6 0 0 1 12 0v1M16 4a4 4 0 0 1 0 8M22 21v-1a6 6 0 0 0-4-5.6"/></svg></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">Human demonstrations</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">Teleoperation data remains the core training signal for manipulation tasks.</p>
+</div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#56616B">Physical AI in Production · October 2026</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#56616B;text-align:right">14</p>
+</section>
+
+<section id="hard" style="background:#F2994A;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#0E1621">The hard part</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Why it’s harder than chatbots</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:48px 64px">
+<div style="display:flex;flex-direction:column;gap:12px;border-top:2px solid #0E1621;padding:24px 0 0 0">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">Real-time control</h3>
+<p style="font-size:32px;line-height:1.35;color:#2B1A0C">Actions must arrive within milliseconds, on the robot, every time.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;border-top:2px solid #0E1621;padding:24px 0 0 0">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">Cost of failure</h3>
+<p style="font-size:32px;line-height:1.35;color:#2B1A0C">A wrong action can damage equipment or injure people.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;border-top:2px solid #0E1621;padding:24px 0 0 0">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">Data scarcity</h3>
+<p style="font-size:32px;line-height:1.35;color:#2B1A0C">No internet-scale robot dataset exists; teleoperation and simulation fill the gap.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;border-top:2px solid #0E1621;padding:24px 0 0 0">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">Sim-to-real gap</h3>
+<p style="font-size:32px;line-height:1.35;color:#2B1A0C">Skills learned in simulation must survive real friction, lighting and wear.</p>
+</div>
+</div>
+<p style="font-size:32px;font-weight:600;line-height:1.4;color:#0E1621">The result: deployments trail demos, and structured sites go first.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#0E1621">Physical AI in Production · October 2026</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#0E1621;text-align:right">15</p>
+</section>
+
+<section id="watch" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Outlook</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">What to watch in the next 12 months</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:row;gap:32px;align-items:start">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1;width:80px;color:#B4530F">01</p>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">VLAs as the main control policy</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">Reports count 11+ commercial deployments by Q1 2026; watch for named customers.</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:row;gap:32px;align-items:start">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1;width:80px;color:#B4530F">02</p>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">Pilots turning into fleet orders</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">BMW Leipzig, Hyundai’s Atlas fleet and Agility’s order book are the bellwethers.</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:row;gap:32px;align-items:start">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1;width:80px;color:#B4530F">03</p>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">First home-robot deliveries</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">Whether 1X NEO ships in volume, and how reliable it is in real homes.</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:row;gap:32px;align-items:start">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1;width:80px;color:#B4530F">04</p>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">Safety standards for humanoids</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">Emerging rules for legged robots that work near people without safety cages.</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:row;gap:32px;align-items:start">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1;width:80px;color:#B4530F">05</p>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">Licensed brains versus in-house stacks</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D4A57">Whether π, Skild and GR00T win robot makers over from building their own models.</p>
+</div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#5F6B76">Physical AI in Production · October 2026</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">16</p>
+</section>
+
+<section id="takeaways" style="background:#0E1621;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#F2994A">Summary</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#F4F2EC">Key takeaways</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:row;gap:40px;align-items:start">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.25;width:72px;color:#F2994A">1</p>
+<p style="flex:1;font-size:44px;line-height:1.25;color:#F4F2EC">Physical AI is in production where spaces are structured and data is plentiful: warehouses and logistics.</p>
+</div>
+<div style="display:flex;flex-direction:row;gap:40px;align-items:start">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.25;width:72px;color:#F2994A">2</p>
+<p style="flex:1;font-size:44px;line-height:1.25;color:#F4F2EC">Humanoids are in long paid pilots; the next year tests whether they become fleet orders.</p>
+</div>
+<div style="display:flex;flex-direction:row;gap:40px;align-items:start">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.25;width:72px;color:#F2994A">3</p>
+<p style="flex:1;font-size:44px;line-height:1.25;color:#F4F2EC">The stack is splitting into robot makers, model licensors and a simulation and compute layer beneath both.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#8A9AA8">Physical AI in Production · October 2026</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">17</p>
+</section>
+
+<section id="sources" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">References</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Sources and caveats</h2>
+</div>
+<div style="display:flex;flex-direction:row;gap:64px;align-items:start">
+<div style="width:560px;flex:none;display:flex;flex-direction:column;gap:16px;background:#E9E5DA;border-left:6px solid #B4530F;border-radius:8px;padding:36px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">Read with care</h3>
+<p style="font-size:24px;line-height:1.5;color:#3D4A57">Most figures come from industry trackers and vendor announcements, not audited filings. Unit counts and model versions differ between sources. Check primary announcements before relying on a specific number.</p>
+</div>
+<ul style="flex:1;font-size:24px;line-height:1.5;color:#3D4A57">
+<li><a href="https://www.capgemini.com/wp-content/uploads/2026/04/CRI_Physical-AI-Report-web-version.pdf" target="_blank" rel="noopener">Capgemini Research Institute: Physical AI report (Apr 2026)</a></li>
+<li><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Global-Robotics-Leaders-Take-Physical-AI-to-the-Real-World" target="_blank" rel="noopener">NVIDIA: GTC 2026 robotics press release</a></li>
+<li><a href="https://www.aboutamazon.com/news/operations/amazon-million-robots-ai-foundation-model" target="_blank" rel="noopener">Amazon: 1 millionth robot and DeepFleet</a></li>
+<li><a href="https://arxiv.org/pdf/2508.08574" target="_blank" rel="noopener">DeepFleet paper (arXiv 2508.08574)</a></li>
+<li><a href="https://www.figure.ai/news/helix" target="_blank" rel="noopener">Figure AI: Helix</a></li>
+<li><a href="https://www.marktechpost.com/2026/04/28/top-10-physical-ai-models-powering-real-world-robots-in-2026/" target="_blank" rel="noopener">MarkTechPost: Top 10 Physical AI models (Apr 2026)</a></li>
+<li><a href="https://opendatascience.com/physical-ai-in-2026-what-robotics-foundation-models-actually-mean-for-engineers/" target="_blank" rel="noopener">Open Data Science: Physical AI in 2026</a></li>
+<li><a href="https://www.techtimes.com/articles/323842/20260810/dyna-unveils-robot-foundation-model-that-adapts-new-tasks-13-minutes.htm" target="_blank" rel="noopener">TechTimes: Dyna DYNA-2 (Aug 2026)</a></li>
+<li><a href="https://dreamlabs.ai/" target="_blank" rel="noopener">Dream Labs: Dream-1 and Dream API</a></li>
+<li><a href="https://humanoidapplications.com/deployments/" target="_blank" rel="noopener">Humanoid Deployment Tracker</a></li>
+<li><a href="https://arxiv.org/html/2505.04769v1" target="_blank" rel="noopener">Survey of VLA models (arXiv 2505.04769)</a></li>
+</ul>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#5F6B76">Physical AI in Production · October 2026</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">18</p>
+</section>
+
+</main>
+<nav aria-label="Slide navigation">
+<button id="prev" aria-label="Previous slide">←</button>
+<span id="count" aria-live="polite"></span>
+<button id="next" aria-label="Next slide">→</button>
+<span class="hint">Arrow keys or swipe to navigate</span>
+</nav>
+<script>
+const stage = document.getElementById('stage');
+const slides = [...stage.querySelectorAll('section')];
+const count = document.getElementById('count');
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
+let index = 0;
+
+function fit() {
+  const scale = Math.min(innerWidth / 1920, (innerHeight - 56) / 1080);
+  stage.style.transform = `scale(${scale})`;
+  stage.style.left = `${(innerWidth - 1920 * scale) / 2}px`;
+  stage.style.top = `${(innerHeight - 56 - 1080 * scale) / 2}px`;
+}
+
+function show(i) {
+  index = Math.max(0, Math.min(slides.length - 1, i));
+  slides.forEach((s, n) => {
+    s.classList.toggle('current', n === index);
+    s.setAttribute('aria-hidden', n === index ? 'false' : 'true');
+  });
+  count.textContent = `${index + 1} / ${slides.length}`;
+  prev.disabled = index === 0;
+  next.disabled = index === slides.length - 1;
+  history.replaceState(null, '', `#${index + 1}`);
+}
+
+prev.addEventListener('click', () => show(index - 1));
+next.addEventListener('click', () => show(index + 1));
+addEventListener('keydown', (e) => {
+  if (['ArrowRight', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); show(index + 1); }
+  if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); show(index - 1); }
+  if (e.key === 'Home') show(0);
+  if (e.key === 'End') show(slides.length - 1);
+});
+let touchX = null;
+addEventListener('touchstart', (e) => { touchX = e.touches[0].clientX; }, { passive: true });
+addEventListener('touchend', (e) => {
+  if (touchX === null) return;
+  const dx = e.changedTouches[0].clientX - touchX;
+  if (Math.abs(dx) > 50) show(index + (dx < 0 ? 1 : -1));
+  touchX = null;
+});
+addEventListener('resize', fit);
+addEventListener('hashchange', () => show(parseInt(location.hash.slice(1), 10) - 1 || 0));
+
+fit();
+show(parseInt(location.hash.slice(1), 10) - 1 || 0);
+</script>
+</body>
+</html>
