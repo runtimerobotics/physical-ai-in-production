@@ -1,12 +1,12 @@
 # Physical AI in Production
 
-A 36-slide industry briefing (October 2026): where robot foundation models are shipping today, where they're still in pilots, how to take a model to production, and what to watch next.
+A 42-slide industry briefing, in six sections, (October 2026): where robot foundation models are shipping today, where they're still in pilots, how to take a model to production, and what to watch next.
 
 By **Lentin Joseph**, CEO of RUNTIME Robotics and author of 11 books on ROS and robotics.
 
 **View it:** https://runtimerobotics.github.io/physical-ai-in-production/
 
-Navigate with the arrow keys, the buttons at the bottom, or by swiping. Link to a slide with `#n`, for example `#8` for open VLA models or `#15` for the videos.
+Navigate with the arrow keys, the buttons at the bottom, or by swiping. Link to a slide with `#n`, for example `#10` for open VLA models or `#18` for the videos.
 
 ## Contents
 

@@ -45,62 +45,103 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </head>
 <body>
 <main id="stage" aria-live="polite">
-<section id="cover" style="background:#0E1621;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:end;gap:40px">
-<svg aria-label="" viewBox="0 0 640 640" width="640" height="640" style="position:absolute;left:1152px;top:128px;width:640px;height:640px"><g fill="none" stroke="#2A3B4C" stroke-width="2"><circle cx="320" cy="320" r="90"/><circle cx="320" cy="320" r="170"/><circle cx="320" cy="320" r="250"/><circle cx="320" cy="320" r="315"/><line x1="0" y1="320" x2="640" y2="320"/><line x1="320" y1="0" x2="320" y2="640"/></g><g stroke="#F2994A" stroke-width="3" fill="none"><path d="M320 320 L440 200 L540 260"/><path d="M320 320 L200 470"/></g><circle cx="320" cy="320" r="18" fill="#F2994A"/><circle cx="440" cy="200" r="11" fill="#F2994A"/><circle cx="540" cy="260" r="11" fill="#7FB7BE"/><circle cx="200" cy="470" r="11" fill="#7FB7BE"/><circle cx="150" cy="90" r="7" fill="#3E5163"/><circle cx="560" cy="520" r="7" fill="#3E5163"/></svg>
+<section id="cover" style="background:#0B1219;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:end;gap:36px">
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(90deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(0deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="position:absolute;left:1000px;top:110px;width:880px;height:880px;background:radial-gradient(circle at 50% 50%, rgba(242,153,74,0.16), rgba(242,153,74,0) 62%)"></div>
+<svg aria-label="Illustration of a robot arm whose wrist camera detects a box and plans a path to pick it up" viewBox="0 0 760 800" width="760" height="800" style="position:absolute;left:1060px;top:140px;width:760px;height:800px"><g fill="none" stroke="#1C2A37" stroke-width="2"><circle cx="360" cy="430" r="330"/><circle cx="360" cy="430" r="230"/></g><g stroke="#2A3B4C" stroke-width="2"><line x1="86" y1="128" x2="168" y2="84"/><line x1="86" y1="128" x2="150" y2="206"/><line x1="168" y1="84" x2="244" y2="150"/><line x1="150" y1="206" x2="244" y2="150"/><line x1="168" y1="84" x2="150" y2="206"/></g><line x1="244" y1="150" x2="262" y2="300" stroke="#F2994A" stroke-width="2" stroke-dasharray="6 8"/><circle cx="86" cy="128" r="9" fill="#7FB7BE"/><circle cx="168" cy="84" r="9" fill="#F2994A"/><circle cx="150" cy="206" r="9" fill="#7FB7BE"/><circle cx="244" cy="150" r="11" fill="#F2994A"/><line x1="30" y1="704" x2="730" y2="704" stroke="#2A3B4C" stroke-width="2"/><polygon points="527,194 420,560 720,530" fill="#7FB7BE" fill-opacity="0.10" stroke="#7FB7BE" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="8 8"/><polygon points="566,526 676,526 698,504 588,504" fill="#F2994A"/><rect x="566" y="526" width="110" height="78" fill="#C9772F"/><polygon points="676,526 698,504 698,582 676,604" fill="#A85F22"/><g stroke="#7FB7BE" stroke-width="4" fill="none" stroke-linecap="round"><path d="M548 506 V490 H566"/><path d="M698 490 H716 V506"/><path d="M548 600 V618 H566"/><path d="M698 618 H716 V600"/></g><path d="M516 300 Q 610 330 628 484" fill="none" stroke="#F2994A" stroke-width="3" stroke-dasharray="10 8"/><polygon points="628,498 618,478 640,480" fill="#F2994A"/><rect x="252" y="644" width="180" height="60" rx="10" fill="#18242F" stroke="#3E5163" stroke-width="2"/><rect x="292" y="602" width="100" height="46" rx="8" fill="#22313F" stroke="#3E5163" stroke-width="2"/><line x1="342" y1="582" x2="252" y2="332" stroke="#1E2C3A" stroke-width="66" stroke-linecap="round"/><line x1="342" y1="582" x2="252" y2="332" stroke="#2A3B4C" stroke-width="50" stroke-linecap="round"/><line x1="342" y1="582" x2="252" y2="332" stroke="#3E5163" stroke-width="2" stroke-dasharray="4 10"/><line x1="252" y1="332" x2="502" y2="204" stroke="#1E2C3A" stroke-width="54" stroke-linecap="round"/><line x1="252" y1="332" x2="502" y2="204" stroke="#2A3B4C" stroke-width="40" stroke-linecap="round"/><line x1="252" y1="332" x2="502" y2="204" stroke="#3E5163" stroke-width="2" stroke-dasharray="4 10"/><circle cx="342" cy="582" r="46" fill="#0E1621" stroke="#F2994A" stroke-width="6"/><circle cx="342" cy="582" r="11" fill="#F2994A"/><circle cx="252" cy="332" r="40" fill="#0E1621" stroke="#F2994A" stroke-width="6"/><circle cx="252" cy="332" r="10" fill="#F2994A"/><line x1="480" y1="234" x2="538" y2="220" stroke="#D5DEE6" stroke-width="16" stroke-linecap="round"/><line x1="484" y1="236" x2="494" y2="292" stroke="#D5DEE6" stroke-width="11" stroke-linecap="round"/><line x1="534" y1="222" x2="548" y2="278" stroke="#D5DEE6" stroke-width="11" stroke-linecap="round"/><circle cx="502" cy="204" r="32" fill="#0E1621" stroke="#F2994A" stroke-width="6"/><circle cx="502" cy="204" r="8" fill="#F2994A"/><rect x="514" y="160" width="38" height="24" rx="5" fill="#7FB7BE"/><circle cx="533" cy="172" r="6" fill="#0B1219"/></svg>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#F2994A">Industry briefing · October 2026</p>
-<h1 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:120px;font-weight:600;line-height:1.05;width:1000px;color:#F4F2EC">Physical AI<br>in Production</h1>
-<p style="font-size:44px;line-height:1.3;width:980px;color:#B8C4CF">Where robot foundation models are shipping today, and where they’re still in pilots</p>
-<div style="width:1000px;display:flex;flex-direction:column;gap:8px;border-top:1px solid #2A3B4C;padding:28px 0 0 0">
+<h1 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:120px;font-weight:600;line-height:1.02;width:900px;color:#F4F2EC">Physical AI<br>in Production</h1>
+<p style="font-size:40px;line-height:1.3;width:860px;color:#B8C4CF">Where robot foundation models are shipping today, and where they’re still in pilots</p>
+<div style="display:flex;flex-direction:row;flex-wrap:wrap;gap:12px;width:900px">
+<p style="font-size:24px;color:#D5DEE6;border:1px solid #3E5163;border-radius:24px;padding:6px 18px">VLA models</p>
+<p style="font-size:24px;color:#D5DEE6;border:1px solid #3E5163;border-radius:24px;padding:6px 18px">Humanoids</p>
+<p style="font-size:24px;color:#D5DEE6;border:1px solid #3E5163;border-radius:24px;padding:6px 18px">Robot fleets</p>
+<p style="font-size:24px;color:#D5DEE6;border:1px solid #3E5163;border-radius:24px;padding:6px 18px">ROS 2</p>
+</div>
+<div style="width:900px;display:flex;flex-direction:row;align-items:center;gap:24px;border-top:1px solid #2A3B4C;padding:28px 0 0 0">
+<div style="flex:none;width:72px;height:72px;display:flex;align-items:center;justify-content:center;background:#F2994A;border-radius:50%"><p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:28px;font-weight:700;color:#0B1219">LJ</p></div>
+<div style="display:flex;flex-direction:column;gap:4px">
 <p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#F4F2EC">Lentin Joseph</p>
 <p style="font-size:24px;line-height:1.4;color:#B8C4CF">CEO, RUNTIME Robotics · Author of 11 books on ROS and robotics</p>
+</div>
 </div>
 </section>
 
 <section id="agenda" style="background:#E9E5DA;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">Overview</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#D9D4C7"></div>
+<div style="position:absolute;left:1432px;top:68px;width:17px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#A04A0D">Agenda</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">What we’ll cover</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:column">
 <div style="display:flex;flex-direction:row;gap:40px;align-items:baseline;border-top:1px solid #B9B2A2;padding:16px 0 16px 0">
 <p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;width:90px;color:#A04A0D">01</p>
 <p style="flex:1;font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:500;color:#0E1621">What Physical AI is, and how far it has come</p>
-<p style="width:260px;font-size:24px;text-align:right;color:#56616B">Slides 3–6</p>
+<p style="width:260px;font-size:24px;text-align:right;color:#56616B">Slides 3–7</p>
 </div>
 <div style="display:flex;flex-direction:row;gap:40px;align-items:baseline;border-top:1px solid #B9B2A2;padding:16px 0 16px 0">
 <p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;width:90px;color:#A04A0D">02</p>
 <p style="flex:1;font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:500;color:#0E1621">The models powering real robots</p>
-<p style="width:260px;font-size:24px;text-align:right;color:#56616B">Slides 7–11</p>
+<p style="width:260px;font-size:24px;text-align:right;color:#56616B">Slides 8–13</p>
 </div>
 <div style="display:flex;flex-direction:row;gap:40px;align-items:baseline;border-top:1px solid #B9B2A2;padding:16px 0 16px 0">
 <p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;width:90px;color:#A04A0D">03</p>
 <p style="flex:1;font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:500;color:#0E1621">Deployments, plus China and India</p>
-<p style="width:260px;font-size:24px;text-align:right;color:#56616B">Slides 12–18</p>
+<p style="width:260px;font-size:24px;text-align:right;color:#56616B">Slides 14–21</p>
 </div>
 <div style="display:flex;flex-direction:row;gap:40px;align-items:baseline;border-top:1px solid #B9B2A2;padding:16px 0 16px 0">
 <p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;width:90px;color:#A04A0D">04</p>
 <p style="flex:1;font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:500;color:#0E1621">Business models, enablers and hard problems</p>
-<p style="width:260px;font-size:24px;text-align:right;color:#56616B">Slides 19–21</p>
+<p style="width:260px;font-size:24px;text-align:right;color:#56616B">Slides 22–25</p>
 </div>
 <div style="display:flex;flex-direction:row;gap:40px;align-items:baseline;border-top:1px solid #B9B2A2;padding:16px 0 16px 0">
 <p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;width:90px;color:#A04A0D">05</p>
 <p style="flex:1;font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:500;color:#0E1621">Taking a model to production</p>
-<p style="width:260px;font-size:24px;text-align:right;color:#56616B">Slides 22–30</p>
+<p style="width:260px;font-size:24px;text-align:right;color:#56616B">Slides 26–35</p>
 </div>
 <div style="display:flex;flex-direction:row;gap:40px;align-items:baseline;border-top:1px solid #B9B2A2;border-bottom:1px solid #B9B2A2;padding:16px 0 16px 0">
 <p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;width:90px;color:#A04A0D">06</p>
 <p style="flex:1;font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:500;color:#0E1621">Outlook, takeaways and how to start</p>
-<p style="width:260px;font-size:24px;text-align:right;color:#56616B">Slides 31–33</p>
+<p style="width:260px;font-size:24px;text-align:right;color:#56616B">Slides 36–39</p>
 </div>
 </div>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#56616B">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#56616B;text-align:right">02</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#C9C3B4"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#56616B"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#56616B;text-align:right">02 / 42</p>
+</section>
+
+<section id="div-1" style="background:#0B1219;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:96px">
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(90deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(0deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:28px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:240px;font-weight:700;line-height:0.9;color:transparent;-webkit-text-stroke:3px #F2994A">01</p>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:96px;font-weight:600;line-height:1.05;width:1000px;color:#F4F2EC">Foundations</h2>
+<p style="font-size:32px;line-height:1.4;width:900px;color:#B8C4CF">What Physical AI is, how a VLA model works, and how far deployments have come.</p>
+</div>
+<div style="flex:none;width:540px;display:flex;flex-direction:column;gap:22px;border-left:2px solid #2A3B4C;padding:8px 0 8px 40px">
+<p style="font-size:28px;font-weight:600;color:#F2994A">01 · Foundations</p>
+<p style="font-size:28px;color:#5B6B7A">02 · The models</p>
+<p style="font-size:28px;color:#5B6B7A">03 · Deployments</p>
+<p style="font-size:28px;color:#5B6B7A">04 · Market and hard problems</p>
+<p style="font-size:28px;color:#5B6B7A">05 · Taking a model to production</p>
+<p style="font-size:28px;color:#5B6B7A">06 · Outlook and next steps</p>
+</div>
 </section>
 
 <section id="define" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">01 · Foundations</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:34px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">The concept</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">What “Physical AI” means</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <p style="font-size:44px;line-height:1.25;width:1560px;color:#3D4A57">AI models that perceive, reason about and act in the physical world, <span style="color:#0E1621">learning behaviors from data</span> instead of being hand-programmed for each task.</p>
 <div style="display:flex;flex-direction:row;align-items:center;gap:24px">
@@ -124,14 +165,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <p style="font-size:28px;line-height:1.4;color:#3D4A57">Teleoperation, simulation, synthetic video and fleet logs feed retraining</p>
 </div>
 </div>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">03</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">04 / 42</p>
 </section>
 
 <section id="vla-inside" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:28px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">01 · Foundations</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:43px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Under the hood</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">How a VLA model works</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:row;align-items:center;gap:16px">
 <div style="flex:1;align-self:stretch;display:flex;flex-direction:column;gap:8px;background:#FBFAF6;border:1px solid #D9D4C7;border-radius:12px;padding:22px">
@@ -174,14 +220,21 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 </div>
 <p style="font-size:28px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">The idea:</b> the language model brings general knowledge; the action head turns it into smooth, fast motor commands.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">04</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">05 / 42</p>
 </section>
 
 <section id="maturity" style="background:#0E1621;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:48px">
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(90deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(0deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#8A9AA8">01 · Foundations</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#2A3B4C"></div>
+<div style="position:absolute;left:1432px;top:68px;width:51px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#F2994A">Maturity check</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#F4F2EC">Three levels of maturity</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:row;gap:48px">
 <div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:8px solid #F2994A;padding:32px 0 0 0">
@@ -201,14 +254,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 </div>
 <p style="font-size:32px;line-height:1.4;width:1400px;color:#F4F2EC">The more structured the environment, the further along the deployment.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#8A9AA8">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">05</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#2A3B4C"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#8A9AA8"><b style="color:#F4F2EC">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">06 / 42</p>
 </section>
 
 <section id="timeline" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">01 · Foundations</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:60px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">How we got here</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">From pilots to paid work, 2024–2026</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:row">
 <div style="flex:1;display:flex;flex-direction:column;gap:24px">
@@ -261,14 +319,38 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 </div>
 <p style="font-size:32px;line-height:1.4;width:1500px;color:#3D4A57">In about two years, Physical AI went from first commercial contracts to <span style="color:#0E1621">fleet-scale use in warehouses</span> and humanoids on factory floors.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">06</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">07 / 42</p>
+</section>
+
+<section id="div-2" style="background:#0B1219;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:96px">
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(90deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(0deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:28px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:240px;font-weight:700;line-height:0.9;color:transparent;-webkit-text-stroke:3px #F2994A">02</p>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:96px;font-weight:600;line-height:1.05;width:1000px;color:#F4F2EC">The models</h2>
+<p style="font-size:32px;line-height:1.4;width:900px;color:#B8C4CF">The foundation models behind real robots, the open ones you can download, and how they work.</p>
+</div>
+<div style="flex:none;width:540px;display:flex;flex-direction:column;gap:22px;border-left:2px solid #2A3B4C;padding:8px 0 8px 40px">
+<p style="font-size:28px;color:#5B6B7A">01 · Foundations</p>
+<p style="font-size:28px;font-weight:600;color:#F2994A">02 · The models</p>
+<p style="font-size:28px;color:#5B6B7A">03 · Deployments</p>
+<p style="font-size:28px;color:#5B6B7A">04 · Market and hard problems</p>
+<p style="font-size:28px;color:#5B6B7A">05 · Taking a model to production</p>
+<p style="font-size:28px;color:#5B6B7A">06 · Outlook and next steps</p>
+</div>
 </section>
 
 <section id="models" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">02 · The models</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:77px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">The model landscape</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Models powering real robots</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <table style="font-family:'IBM Plex Sans', Arial, sans-serif;font-size:26px;color:#0E1621;border:1px solid #D9D4C7">
 <tr style="background:#0E1621"><th style="width:16%;color:#F4F2EC">Model</th><th style="width:21%;color:#F4F2EC">Company</th><th style="width:26%;color:#F4F2EC">What it is</th><th style="width:12%;color:#F4F2EC">Stage</th><th style="width:25%;color:#F4F2EC">Where</th></tr>
@@ -282,14 +364,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <tr style="background:#ECE8DD"><td>Dream-1</td><td>Dream Labs</td><td>Cross-robot brain via API</td><td style="color:#4A5560">PLATFORM</td><td>Dream API and playground</td></tr>
 </table>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57"><b style="color:#A04A0D">LIVE</b> paid production use · <b style="color:#22646B">PILOT</b> paid trials with named customers · <b style="color:#4A5560">PLATFORM / PREVIEW</b> available to developers</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">07</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">09 / 42</p>
 </section>
 
 <section id="openvla" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">02 · The models</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:86px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Open models · newest first</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Open VLAs you can download today</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <table style="font-family:'IBM Plex Sans', Arial, sans-serif;font-size:24px;color:#0E1621;border:1px solid #D9D4C7">
 <tr style="background:#0E1621"><th style="width:22%;color:#F4F2EC">Model</th><th style="width:23%;color:#F4F2EC">Organization</th><th style="width:10%;color:#F4F2EC">Size</th><th style="width:14%;color:#F4F2EC">Released</th><th style="width:31%;color:#F4F2EC">License</th></tr>
@@ -305,14 +392,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <tr style="background:#ECE8DD"><td>OpenVLA</td><td>Stanford</td><td>7B</td><td>Jun 2024</td><td>MIT</td></tr>
 </table>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Before shipping:</b> check each model card. GO-1 is non-commercial; GR00T weights use NVIDIA’s own license; most run in LeRobot.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026 · Source: Hugging Face model cards</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">08</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production · Source: Hugging Face model cards</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">10 / 42</p>
 </section>
 
 <section id="vla-trend" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:28px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">02 · The models</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:94px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Open models · the trend</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">A new open VLA every few months</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="position:relative;width:1664px;height:520px;background:#FBFAF6;border:1px solid #D9D4C7;border-radius:16px">
 <svg aria-label="Scatter chart of ten open VLA models by release date and size, June 2024 to July 2026, from 0.45B to 7B parameters" viewBox="0 0 1664 520" width="1664" height="520" style="position:absolute;left:0;top:0;width:1664px;height:520px">
@@ -355,14 +447,21 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <p style="position:absolute;left:1480px;top:472px;width:140px;font-size:24px;text-align:center;color:#56616B">Jul 2026</p>
 </div>
 <p style="font-size:28px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Ten open models in two years,</b> from 0.45B to 7B; orange marks the 2026 releases.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026 · Size (y) by release date (x)</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">09</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production · Size (y) by release date (x)</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">11 / 42</p>
 </section>
 
 <section id="dreamlabs" style="background:#0E1621;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(90deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(0deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#8A9AA8">02 · The models</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#2A3B4C"></div>
+<div style="position:absolute;left:1432px;top:68px;width:103px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#F2994A">Spotlight · Robot brain as an API</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#F4F2EC">Dream Labs: one brain, many robots</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:row;align-items:center;gap:24px">
 <div style="flex:1;align-self:stretch;display:flex;flex-direction:column;gap:12px;background:#18242F;border:1px solid #2A3B4C;border-radius:16px;padding:36px">
@@ -395,14 +494,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 </div>
 <p style="font-size:32px;line-height:1.4;color:#F4F2EC"><b>Why it matters:</b> robot brains sold the way developers already buy LLMs. <a href="https://dreamlabs.ai/" target="_blank" rel="noopener">dreamlabs.ai</a></p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#8A9AA8">Lentin Joseph · Physical AI in Production · October 2026 · Source: Dream Labs</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">10</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#2A3B4C"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#8A9AA8"><b style="color:#F4F2EC">Lentin Joseph</b> · Physical AI in Production · Source: Dream Labs</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">12 / 42</p>
 </section>
 
 <section id="dreamdemo" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">02 · The models</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:111px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Demo · Dream Labs Robot Playground</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Prompt a robot in plain language</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:row;gap:48px;align-items:start">
 <img src="assets/dreamlabs-playground.webp" alt="Dream Labs Robot Playground: four robot arm setups on tabletops, each running a typed prompt such as “Put the blue block in the box” and “Put the teddy bear in the flower pot”, with a prompt box and robot selector set to YAM" style="width:1180px;height:611px;object-fit:cover;border-radius:12px;border:1px solid #D9D4C7;box-shadow:0 12px 32px rgba(14,22,33,0.18)">
@@ -417,14 +521,38 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <p style="font-size:24px;font-weight:600;line-height:1.4;color:#B4530F"><a href="https://dreamlabs.ai/playground/" target="_blank" rel="noopener">Try it: dreamlabs.ai/playground</a></p>
 </div>
 </div>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026 · Screenshot: Dream Labs</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">11</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production · Screenshot: Dream Labs</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">13 / 42</p>
+</section>
+
+<section id="div-3" style="background:#0B1219;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:96px">
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(90deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(0deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:28px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:240px;font-weight:700;line-height:0.9;color:transparent;-webkit-text-stroke:3px #F2994A">03</p>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:96px;font-weight:600;line-height:1.05;width:1000px;color:#F4F2EC">Deployments</h2>
+<p style="font-size:32px;line-height:1.4;width:900px;color:#B8C4CF">Where Physical AI works today: warehouses, factories and homes, plus the race in China and India.</p>
+</div>
+<div style="flex:none;width:540px;display:flex;flex-direction:column;gap:22px;border-left:2px solid #2A3B4C;padding:8px 0 8px 40px">
+<p style="font-size:28px;color:#5B6B7A">01 · Foundations</p>
+<p style="font-size:28px;color:#5B6B7A">02 · The models</p>
+<p style="font-size:28px;font-weight:600;color:#F2994A">03 · Deployments</p>
+<p style="font-size:28px;color:#5B6B7A">04 · Market and hard problems</p>
+<p style="font-size:28px;color:#5B6B7A">05 · Taking a model to production</p>
+<p style="font-size:28px;color:#5B6B7A">06 · Outlook and next steps</p>
+</div>
 </section>
 
 <section id="production" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">03 · Deployments</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:129px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Level 1 · In production</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Shipping today</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:24px">
 <div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #F2994A;border-radius:12px;padding:28px">
@@ -458,14 +586,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <p style="font-size:24px;line-height:1.4;color:#3D4A57">500k+ paid rides a week (Mar 2026), driven by the Waymo Foundation Model.</p>
 </div>
 </div>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">12</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">15 / 42</p>
 </section>
 
 <section id="amazon" style="background:#E9E5DA;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:48px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">03 · Deployments</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#D9D4C7"></div>
+<div style="position:absolute;left:1432px;top:68px;width:137px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#A04A0D">Spotlight</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Amazon shows what scale looks like</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:row;gap:48px">
 <div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:2px solid #0E1621;padding:40px 0 0 0">
@@ -482,14 +615,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 </div>
 <p style="font-size:32px;line-height:1.4;color:#F4F2EC;background:#0E1621;border-radius:12px;padding:32px 40px"><b style="color:#F2994A">Lesson:</b> foundation models pay off first where a company already owns huge amounts of its own robot data.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#56616B">Lentin Joseph · Physical AI in Production · October 2026 · Source: Amazon</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#56616B;text-align:right">13</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#C9C3B4"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#56616B"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production · Source: Amazon</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#56616B;text-align:right">16 / 42</p>
 </section>
 
 <section id="pilots" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">03 · Deployments</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:146px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#2C6E75">Level 2 · Paid pilots</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Humanoids: long pilots in factories</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <table style="font-family:'IBM Plex Sans', Arial, sans-serif;font-size:28px;color:#0E1621;border:1px solid #D9D4C7">
 <tr style="background:#0E1621"><th style="width:26%;color:#F4F2EC">Robot / model</th><th style="width:22%;color:#F4F2EC">Customer</th><th style="width:52%;color:#F4F2EC">Status</th></tr>
@@ -501,14 +639,21 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <tr style="background:#ECE8DD"><td>Tesla Optimus</td><td>Tesla (internal)</td><td>No external customer deployments recorded</td></tr>
 </table>
 <p style="font-size:32px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">The milestone to watch:</b> pilots that turn into fleet orders, not more pilots.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">14</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">17 / 42</p>
 </section>
 
 <section id="videos" style="background:#0E1621;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(90deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(0deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#8A9AA8">03 · Deployments</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#2A3B4C"></div>
+<div style="position:absolute;left:1432px;top:68px;width:154px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#F2994A">See it in action</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#F4F2EC">Physical AI on the job: four videos</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:24px">
 <div style="display:flex;flex-direction:row;gap:28px;align-items:start;background:#18242F;border:1px solid #2A3B4C;border-radius:16px;padding:24px">
@@ -560,14 +705,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 </div>
 </div>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#8A9AA8">Lentin Joseph · Physical AI in Production · October 2026 · Videos open on their original sites</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">15</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#2A3B4C"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#8A9AA8"><b style="color:#F4F2EC">Lentin Joseph</b> · Physical AI in Production · Videos open on their original sites</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">18 / 42</p>
 </section>
 
 <section id="consumer" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">03 · Deployments</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:163px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">Level 3 · Announced</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Home robots: announced, not yet delivered</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:row;gap:24px;align-items:stretch">
 <div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FBFAF6;border:1px solid #D9D4C7;border-radius:16px;padding:44px">
@@ -590,14 +740,21 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 </div>
 <p style="font-size:32px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Watch for:</b> delivery numbers and reliability data from real homes, not demo videos.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">16</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">19 / 42</p>
 </section>
 
 <section id="china" style="background:#0E1621;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:36px">
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(90deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(0deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#8A9AA8">03 · Deployments</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#2A3B4C"></div>
+<div style="position:absolute;left:1432px;top:68px;width:171px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#F2994A">Global race · China</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#F4F2EC">China leads on humanoid volume</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:row;gap:48px">
 <div style="flex:1;display:flex;flex-direction:column;gap:16px;border-top:2px solid #3E5163;padding:32px 0 0 0">
@@ -622,14 +779,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <div style="display:flex;flex-direction:row;align-items:center;gap:20px"><p style="width:220px;font-size:24px;font-weight:600;color:#F4F2EC">Leju</p><div style="flex:1;display:flex;flex-direction:row;align-items:center;gap:14px"><div style="width:5.2%;height:28px;border-radius:6px;background:#F2994A"></div><p style="font-size:24px;font-weight:600;color:#F4F2EC">2.9%</p></div></div>
 <div style="display:flex;flex-direction:row;align-items:center;gap:20px"><p style="width:220px;font-size:24px;font-weight:600;color:#F4F2EC">Rest of world</p><div style="flex:1;display:flex;flex-direction:row;align-items:center;gap:14px"><div style="width:25.2%;height:28px;border-radius:6px;background:#5B6B7A"></div><p style="font-size:24px;font-weight:600;color:#F4F2EC">14%</p></div></div>
 </div>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#8A9AA8">Lentin Joseph · Physical AI in Production · October 2026 · Trackers vary</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">17</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#2A3B4C"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#8A9AA8"><b style="color:#F4F2EC">Lentin Joseph</b> · Physical AI in Production · Trackers vary</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">20 / 42</p>
 </section>
 
 <section id="india" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:36px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">03 · Deployments</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:180px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Global race · India</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">India is building its Physical AI base</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:row;gap:24px">
 <div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #F2994A;border-radius:16px;padding:32px">
@@ -653,14 +815,38 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <p style="flex:1;font-size:24px;line-height:1.45;color:#D5DEE6">MeitY’s draft National Strategy on Robotics proposes a National Robotics Mission, with manufacturing, healthcare, agriculture and security as focus sectors. Final approval is not yet confirmed.</p>
 </div>
 <p style="font-size:32px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">The opening for India:</b> robot software, systems integration and cost-efficient deployment in manufacturing.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">18</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">21 / 42</p>
+</section>
+
+<section id="div-4" style="background:#0B1219;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:96px">
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(90deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(0deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:28px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:240px;font-weight:700;line-height:0.9;color:transparent;-webkit-text-stroke:3px #F2994A">04</p>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:96px;font-weight:600;line-height:1.05;width:1000px;color:#F4F2EC">Market and hard problems</h2>
+<p style="font-size:32px;line-height:1.4;width:900px;color:#B8C4CF">How the business is forming, what makes deployment possible, and why it is harder than chatbots.</p>
+</div>
+<div style="flex:none;width:540px;display:flex;flex-direction:column;gap:22px;border-left:2px solid #2A3B4C;padding:8px 0 8px 40px">
+<p style="font-size:28px;color:#5B6B7A">01 · Foundations</p>
+<p style="font-size:28px;color:#5B6B7A">02 · The models</p>
+<p style="font-size:28px;color:#5B6B7A">03 · Deployments</p>
+<p style="font-size:28px;font-weight:600;color:#F2994A">04 · Market and hard problems</p>
+<p style="font-size:28px;color:#5B6B7A">05 · Taking a model to production</p>
+<p style="font-size:28px;color:#5B6B7A">06 · Outlook and next steps</p>
+</div>
 </section>
 
 <section id="business" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:28px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">04 · Market and hard problems</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:197px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Market dynamics</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Two business models are forming</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:row;gap:24px">
 <div style="flex:1;display:flex;flex-direction:column;gap:18px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:8px solid #0E1621;border-radius:16px;padding:32px 40px">
@@ -677,14 +863,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 </div>
 <p style="font-size:32px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">How customers pay:</b> robots-as-a-service is common, as in Agility’s multi-year deal with GXO.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">19</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">23 / 42</p>
 </section>
 
 <section id="enablers" style="background:#E9E5DA;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">04 · Market and hard problems</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#D9D4C7"></div>
+<div style="position:absolute;left:1432px;top:68px;width:206px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#A04A0D">The enabling layer</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">What makes deployment possible</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:column;gap:36px">
 <div style="display:flex;flex-direction:row;gap:32px;align-items:center">
@@ -717,14 +908,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 </div>
 <p style="font-size:32px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Most teams buy this layer rather than build it:</b> it is the shared foundation under every robot.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#56616B">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#56616B;text-align:right">20</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#C9C3B4"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#56616B"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#56616B;text-align:right">24 / 42</p>
 </section>
 
 <section id="hard" style="background:#F2994A;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#0E1621">04 · Market and hard problems</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#D9813A"></div>
+<div style="position:absolute;left:1432px;top:68px;width:214px;height:6px;border-radius:3px;background:#0E1621"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#0E1621">The hard part</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Why it’s harder than chatbots</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:48px 64px">
 <div style="display:flex;flex-direction:column;gap:12px;border-top:2px solid #0E1621;padding:24px 0 0 0">
@@ -745,14 +941,40 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 </div>
 <p style="font-size:32px;font-weight:600;line-height:1.4;color:#0E1621">The result: deployments trail demos, and structured sites go first.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#0E1621">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#0E1621;text-align:right">21</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9813A"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#0E1621"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#0E1621;text-align:right">25 / 42</p>
+</section>
+
+<section id="div-5" style="background:#0B1219;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:96px">
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(90deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(0deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:28px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:240px;font-weight:700;line-height:0.9;color:transparent;-webkit-text-stroke:3px #F2994A">05</p>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:96px;font-weight:600;line-height:1.05;width:1000px;color:#F4F2EC">Taking a model to production</h2>
+<p style="font-size:32px;line-height:1.4;width:900px;color:#B8C4CF">A technical playbook: from task spec and data to safety, deployment and the data flywheel.</p>
+</div>
+<div style="flex:none;width:540px;display:flex;flex-direction:column;gap:22px;border-left:2px solid #2A3B4C;padding:8px 0 8px 40px">
+<p style="font-size:28px;color:#5B6B7A">01 · Foundations</p>
+<p style="font-size:28px;color:#5B6B7A">02 · The models</p>
+<p style="font-size:28px;color:#5B6B7A">03 · Deployments</p>
+<p style="font-size:28px;color:#5B6B7A">04 · Market and hard problems</p>
+<p style="font-size:28px;font-weight:600;color:#F2994A">05 · Taking a model to production</p>
+<p style="font-size:28px;color:#5B6B7A">06 · Outlook and next steps</p>
+</div>
 </section>
 
 <section id="p-loop" style="background:#0E1621;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:36px">
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(90deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(0deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#8A9AA8">05 · Taking a model to production</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#2A3B4C"></div>
+<div style="position:absolute;left:1432px;top:68px;width:231px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#F2994A">Taking a model to production</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#F4F2EC">The production loop</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <div style="display:grid;grid-template-columns:repeat(8, 1fr);gap:12px">
@@ -779,14 +1001,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 </div>
 <p style="font-size:32px;line-height:1.4;width:1500px;color:#B8C4CF">Each step up in exposure, from simulation to a whole fleet, is <span style="color:#F4F2EC">earned with evidence</span> from the step before.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#8A9AA8">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">22</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#2A3B4C"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#8A9AA8"><b style="color:#F4F2EC">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">27 / 42</p>
 </section>
 
 <section id="p-spec" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:36px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">05 · Taking a model to production</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:240px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Stages 1–2 · Define and collect</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Specify the job, then build the data</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:row;gap:24px">
 <div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #7FB7BE;border-radius:16px;padding:40px">
@@ -811,14 +1038,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 </div>
 <p style="font-size:32px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Coverage beats volume:</b> collect the failures and edge scenes, not more of the easy cases.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">23</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">28 / 42</p>
 </section>
 
 <section id="p-model" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">05 · Taking a model to production</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:249px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Stage 3 · Adapt the model</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Build, fine-tune or call an API?</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <table style="font-family:'IBM Plex Sans', Arial, sans-serif;font-size:24px;color:#0E1621;border:1px solid #D9D4C7">
 <tr style="background:#0E1621"><th style="width:19%;color:#F4F2EC"></th><th style="width:27%;color:#F4F2EC">Train your own</th><th style="width:27%;color:#F2994A">Fine-tune a foundation model</th><th style="width:27%;color:#F4F2EC">Call a model API</th></tr>
@@ -829,35 +1061,40 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <tr style="background:#FBFAF6"><td>Examples</td><td>Figure Helix, Tesla</td><td>π0 / openpi, GR00T N, OpenVLA</td><td>Dream API, Gemini Robotics ER</td></tr>
 </table>
 <p style="font-size:28px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Common path:</b> fine-tune a foundation model on task demos, then improve it with reinforcement learning from real deployment.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026 · Times are typical ranges</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">24</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production · Times are typical ranges</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">29 / 42</p>
 </section>
 
 <section id="p-eval" style="background:#E9E5DA;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:36px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">05 · Taking a model to production</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#D9D4C7"></div>
+<div style="position:absolute;left:1432px;top:68px;width:257px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#A04A0D">Stage 4 · Evaluate in stages</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">The evaluation ladder</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:row;align-items:end;gap:24px">
-<div style="flex:1;min-height:330px;display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #7FB7BE;border-radius:12px;padding:28px">
+<div style="flex:1;min-height:300px;display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #7FB7BE;border-radius:12px;padding:28px">
 <p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#22646B">Step 1</p>
 <h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">Simulation</h3>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Proves:</b> task logic across thousands of randomized scenes.</p>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Exit:</b> success target met on randomized episodes.</p>
 </div>
-<div style="flex:1;min-height:400px;display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #7FB7BE;border-radius:12px;padding:28px">
+<div style="flex:1;min-height:370px;display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #7FB7BE;border-radius:12px;padding:28px">
 <p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#22646B">Step 2</p>
 <h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">Lab bench</h3>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Proves:</b> real sensors and contact physics; the sim-to-real gap.</p>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Exit:</b> target met on a fixed real test set and held-out objects.</p>
 </div>
-<div style="flex:1;min-height:470px;display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #F2994A;border-radius:12px;padding:28px">
+<div style="flex:1;min-height:440px;display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #F2994A;border-radius:12px;padding:28px">
 <p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#A04A0D">Step 3</p>
 <h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">Shadow mode</h3>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Proves:</b> behavior on the live line. The model proposes; people or the legacy system act.</p>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Exit:</b> proposals agree with what was actually done.</p>
 </div>
-<div style="flex:1;min-height:540px;display:flex;flex-direction:column;gap:10px;background:#0E1621;border-radius:12px;padding:28px">
+<div style="flex:1;min-height:510px;display:flex;flex-direction:column;gap:10px;background:#0E1621;border-radius:12px;padding:28px">
 <p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#F2994A">Step 4</p>
 <h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#F4F2EC">Supervised pilot</h3>
 <p style="font-size:24px;line-height:1.4;color:#B8C4CF"><b style="color:#F4F2EC">Proves:</b> throughput and reliability in real production.</p>
@@ -865,14 +1102,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 </div>
 <p style="font-size:28px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Regression rule:</b> every new model version re-runs the test sets and must beat the version already shipped.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#56616B">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#56616B;text-align:right">25</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#C9C3B4"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#56616B"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#56616B;text-align:right">30 / 42</p>
 </section>
 
 <section id="p-safety" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:32px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">05 · Taking a model to production</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:266px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Stage 5 · Engineer safety</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Bound the model, don’t trust it</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:column;gap:10px">
 <div style="display:flex;flex-direction:row;align-items:center;gap:28px;background:#FBFAF6;border:2px dashed #B4530F;border-radius:12px;padding:18px 28px">
@@ -905,14 +1147,21 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <p style="font-size:24px;line-height:1.4;color:#0E1621"><b>Authority grows downward:</b> each lower layer can override everything above it, and only L4–L5 carry safety certification.</p>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Standards:</b> ISO 10218-1/-2 (industrial robots) · ISO/TS 15066 (collaborative operation) · ISO 13849-1 (safety-related controls) · ISO 25785-1 (dynamically stable mobile robots, committee draft)</p>
 </div>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">26</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">31 / 42</p>
 </section>
 
 <section id="p-runtime" style="background:#0E1621;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:36px">
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(90deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(0deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#8A9AA8">05 · Taking a model to production</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#2A3B4C"></div>
+<div style="position:absolute;left:1432px;top:68px;width:274px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#F2994A">Stage 6 · Deploy on the robot</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#F4F2EC">Fit the model inside the control loop</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:row;gap:48px;align-items:start">
 <div style="flex:1;display:flex;flex-direction:column;gap:28px">
@@ -942,14 +1191,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </ul>
 </div>
 </div>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#8A9AA8">Lentin Joseph · Physical AI in Production · October 2026 · Rates: Figure Helix; π0 paper</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">27</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#2A3B4C"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#8A9AA8"><b style="color:#F4F2EC">Lentin Joseph</b> · Physical AI in Production · Rates: Figure Helix; π0 paper</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">32 / 42</p>
 </section>
 
 <section id="arch" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:24px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">05 · Taking a model to production</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:283px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Stage 6 in detail · Reference architecture</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">A Physical AI robot on ROS 2</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:row;align-items:center;gap:20px;border:2px dashed #7FB7BE;border-radius:12px;padding:16px 28px;background:#FBFAF6">
 <p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;width:250px;color:#22646B">Fleet cloud</p>
@@ -994,14 +1248,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;width:250px;color:#F2994A">Safety controller</p>
 <p style="flex:1;font-size:24px;line-height:1.35;color:#D5DEE6">Independent of ROS, wired to the drives: e-stop · safe torque off · speed and separation monitoring</p>
 </div>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">28</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">33 / 42</p>
 </section>
 
 <section id="p-rollout" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:32px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">05 · Taking a model to production</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:291px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Stages 7–8 · Pilot, then operate</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Staged rollouts and the data flywheel</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#56616B">Rollout ladder for each new model version</p>
@@ -1028,14 +1287,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 </div>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Watch:</b> MTBI · interventions per hour · success rate · cycle time · safety events · fleet share per model version</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">29</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">34 / 42</p>
 </section>
 
 <section id="p-checklist" style="background:#E9E5DA;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:36px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">05 · Taking a model to production</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#D9D4C7"></div>
+<div style="position:absolute;left:1432px;top:68px;width:300px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#A04A0D">Before you scale</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Production-readiness checklist</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:22px 64px">
 <div style="display:flex;flex-direction:row;align-items:center;gap:20px"><div style="flex:none;width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:28px;height:28px"><path d="M20 6 9 17l-5-5"/></svg></div><p style="flex:1;font-size:28px;line-height:1.35;color:#0E1621">Task spec with measurable targets, signed off</p></div>
@@ -1050,14 +1314,38 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <div style="display:flex;flex-direction:row;align-items:center;gap:20px"><div style="flex:none;width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:28px;height:28px"><path d="M20 6 9 17l-5-5"/></svg></div><p style="flex:1;font-size:28px;line-height:1.35;color:#0E1621">Staged OTA rollout with tested rollback</p></div>
 </div>
 <p style="font-size:28px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Plus the human side:</b> trained operators, a clear escalation path, and a named owner for every robot.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#56616B">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#56616B;text-align:right">30</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#C9C3B4"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#56616B"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#56616B;text-align:right">35 / 42</p>
+</section>
+
+<section id="div-6" style="background:#0B1219;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:96px">
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(90deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(0deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:28px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:240px;font-weight:700;line-height:0.9;color:transparent;-webkit-text-stroke:3px #F2994A">06</p>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:96px;font-weight:600;line-height:1.05;width:1000px;color:#F4F2EC">Outlook and next steps</h2>
+<p style="font-size:32px;line-height:1.4;width:900px;color:#B8C4CF">What to watch next, the key takeaways, and how to get started.</p>
+</div>
+<div style="flex:none;width:540px;display:flex;flex-direction:column;gap:22px;border-left:2px solid #2A3B4C;padding:8px 0 8px 40px">
+<p style="font-size:28px;color:#5B6B7A">01 · Foundations</p>
+<p style="font-size:28px;color:#5B6B7A">02 · The models</p>
+<p style="font-size:28px;color:#5B6B7A">03 · Deployments</p>
+<p style="font-size:28px;color:#5B6B7A">04 · Market and hard problems</p>
+<p style="font-size:28px;color:#5B6B7A">05 · Taking a model to production</p>
+<p style="font-size:28px;font-weight:600;color:#F2994A">06 · Outlook and next steps</p>
+</div>
 </section>
 
 <section id="watch" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">06 · Outlook and next steps</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:317px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Outlook</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">What to watch in the next 12 months</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:column;gap:24px">
 <div style="display:flex;flex-direction:row;gap:32px;align-items:start">
@@ -1096,14 +1384,21 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 </div>
 </div>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">31</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">37 / 42</p>
 </section>
 
 <section id="takeaways" style="background:#0E1621;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(90deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(0deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#8A9AA8">06 · Outlook and next steps</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#2A3B4C"></div>
+<div style="position:absolute;left:1432px;top:68px;width:326px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#F2994A">Summary</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#F4F2EC">Key takeaways</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:column;gap:32px">
 <div style="display:flex;flex-direction:row;gap:40px;align-items:start">
@@ -1123,14 +1418,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <p style="flex:1;font-size:44px;line-height:1.25;color:#F4F2EC">Production is a loop with safety gates: bound the model, measure interventions, and let fleet data improve it.</p>
 </div>
 </div>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#8A9AA8">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">32</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#2A3B4C"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#8A9AA8"><b style="color:#F4F2EC">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">38 / 42</p>
 </section>
 
 <section id="getstarted" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:36px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">06 · Outlook and next steps</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:334px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Your next step</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Get started this quarter</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:row;gap:24px">
 <div style="flex:1;display:flex;flex-direction:column;gap:18px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #7FB7BE;border-radius:16px;padding:36px">
@@ -1162,14 +1462,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 </div>
 <p style="font-size:32px;line-height:1.4;color:#3D4A57"><b style="color:#0E1621">Start small, measure everything,</b> and let the data flywheel do the rest.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">33</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">39 / 42</p>
 </section>
 
 <section id="sources" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">References</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:343px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">References</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Sources and caveats</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:row;gap:64px;align-items:start">
 <div style="width:560px;flex:none;display:flex;flex-direction:column;gap:16px;background:#E9E5DA;border-left:6px solid #B4530F;border-radius:8px;padding:36px">
@@ -1192,14 +1497,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <li><a href="https://arxiv.org/html/2505.04769v1" target="_blank" rel="noopener">Survey of VLA models (arXiv 2505.04769)</a></li>
 </ul>
 </div>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">34</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">40 / 42</p>
 </section>
 
 <section id="sources2" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="position:absolute;left:128px;top:56px;width:900px;font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#56616B">References</p>
+<div style="position:absolute;left:1432px;top:68px;width:360px;height:6px;border-radius:3px;background:#E3D9C8"></div>
+<div style="position:absolute;left:1432px;top:68px;width:351px;height:6px;border-radius:3px;background:#F2994A"></div>
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">References · continued</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Sources for the latest checks</h2>
+<div style="width:96px;height:6px;border-radius:3px;background:#F2994A"></div>
 </div>
 <div style="display:flex;flex-direction:row;gap:64px;align-items:start">
 <div style="width:520px;flex:none;display:flex;flex-direction:column;gap:16px;background:#E9E5DA;border-left:6px solid #B4530F;border-radius:8px;padding:36px">
@@ -1218,11 +1528,14 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <li><a href="https://indiaai.gov.in/news/meity-is-inviting-public-comments-on-the-draft-national-strategy-on-robotics" target="_blank" rel="noopener">MeitY: draft National Strategy on Robotics</a></li>
 </ul>
 </div>
-<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76">Lentin Joseph · Physical AI in Production · October 2026</p>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">35</p>
+<div style="position:absolute;left:128px;bottom:112px;width:1664px;height:1px;background:#D9D4C7"></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#5F6B76"><b style="color:#0E1621">Lentin Joseph</b> · Physical AI in Production</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">41 / 42</p>
 </section>
 
 <section id="about" style="background:#0E1621;color:#F4F2EC;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:96px">
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(90deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(0deg, rgba(127,183,190,0.06) 0px, rgba(127,183,190,0.06) 1px, transparent 1px, transparent 80px)"></div>
 <div style="flex:1;display:flex;flex-direction:column;gap:36px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#F2994A">Thank you · Questions?</p>
 <h1 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:120px;font-weight:600;line-height:1.05;color:#F4F2EC">Let’s build<br>real robots.</h1>
@@ -1238,7 +1551,7 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <p style="font-size:24px;font-weight:600;text-align:center;color:#F4F2EC">Scan for the slides</p>
 <p style="font-size:24px;line-height:1.35;text-align:center;color:#B8C4CF">runtimerobotics.github.io/<br>physical-ai-in-production</p>
 </div>
-<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">36</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8A9AA8;text-align:right">42 / 42</p>
 </section>
 
 </main>
