@@ -20,5 +20,5 @@ Navigate with the arrow keys, the buttons at the bottom, or by swiping. Link to 
 ## Notes
 
 - Most figures come from industry trackers and vendor announcements, not audited filings. The sources slide lists them.
-- Videos link to their original publishers (BMW Group, Physical Intelligence, Agility Robotics, CNBC). No third-party footage is hosted here.
+- Videos link to their original publishers (BMW Group, Physical Intelligence, Agility Robotics, CNBC). Thumbnails are still frames or share images from those publishers; no video footage is hosted here.
 - The site is a single `index.html` with no build step; fonts load from Google Fonts.
