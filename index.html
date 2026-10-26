@@ -135,17 +135,17 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 <div style="display:flex;flex-direction:row;gap:48px">
 <div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:8px solid #F2994A;padding:32px 0 0 0">
-<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#F2994A">1 · In production</p>
+<div style="flex:none;width:72px;height:72px;display:flex;align-items:center;justify-content:center;background:#F2994A;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#0E1621;width:38px;height:38px"><path d="M20 6 9 17l-5-5"/></svg></div><p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#F2994A">1 · In production</p><div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:1;display:flex;flex-direction:row;gap:8px"><div style="flex:1;height:12px;border-radius:6px;background:#F2994A"></div><div style="flex:1;height:12px;border-radius:6px;background:#F2994A"></div><div style="flex:1;height:12px;border-radius:6px;background:#F2994A"></div></div><p style="font-size:24px;font-weight:600;width:120px;text-align:right;color:#F2994A">High</p></div>
 <h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#F4F2EC">Warehouses, logistics and robotaxis</h3>
 <p style="font-size:24px;line-height:1.5;color:#B8C4CF">Amazon, Agility × GXO, Ultra, Dyna Robotics, Waymo</p>
 </div>
 <div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:8px solid #7FB7BE;padding:32px 0 0 0">
-<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#7FB7BE">2 · Paid pilots</p>
+<div style="flex:none;width:72px;height:72px;display:flex;align-items:center;justify-content:center;background:#7FB7BE;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#0E1621;width:38px;height:38px"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#7FB7BE">2 · Paid pilots</p><div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:1;display:flex;flex-direction:row;gap:8px"><div style="flex:1;height:12px;border-radius:6px;background:#7FB7BE"></div><div style="flex:1;height:12px;border-radius:6px;background:#7FB7BE"></div><div style="flex:1;height:12px;border-radius:6px;background:#2A3B4C"></div></div><p style="font-size:24px;font-weight:600;width:120px;text-align:right;color:#7FB7BE">Medium</p></div>
 <h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#F4F2EC">Humanoids in factories</h3>
 <p style="font-size:24px;line-height:1.5;color:#B8C4CF">Figure × BMW, Atlas × Hyundai, Apptronik, Hexagon AEON, Skild × Foxconn</p>
 </div>
 <div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:8px solid #5B6B7A;padding:32px 0 0 0">
-<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#9AAAB8">3 · Announced</p>
+<div style="flex:none;width:72px;height:72px;display:flex;align-items:center;justify-content:center;background:#9AAAB8;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#0E1621;width:38px;height:38px"><path d="M3 11 12 3l9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div><p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#9AAAB8">3 · Announced</p><div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:1;display:flex;flex-direction:row;gap:8px"><div style="flex:1;height:12px;border-radius:6px;background:#9AAAB8"></div><div style="flex:1;height:12px;border-radius:6px;background:#2A3B4C"></div><div style="flex:1;height:12px;border-radius:6px;background:#2A3B4C"></div></div><p style="font-size:24px;font-weight:600;width:120px;text-align:right;color:#9AAAB8">Early</p></div>
 <h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#F4F2EC">Robots in the home</h3>
 <p style="font-size:24px;line-height:1.5;color:#B8C4CF">1X NEO is on pre-order; no confirmed volume deliveries yet</p>
 </div>
@@ -161,35 +161,53 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">From pilots to paid work, 2024–2026</h2>
 </div>
 <div style="display:flex;flex-direction:row">
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:6px solid #0E1621;padding:28px 28px 0 0">
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:row;align-items:center"><div style="flex:none;width:32px;height:32px;border-radius:50%;background:#F4F2EC;border:6px solid #0E1621"></div><div style="flex:1;height:6px;background:#0E1621"></div></div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:0 28px 0 0">
 <p style="font-size:24px;font-weight:600;color:#B4530F">Jun 2024</p>
 <h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Agility × GXO</h3>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57">First multi-year humanoid robots-as-a-service deal</p>
 </div>
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:6px solid #0E1621;padding:28px 28px 0 0">
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:row;align-items:center"><div style="flex:none;width:32px;height:32px;border-radius:50%;background:#F4F2EC;border:6px solid #0E1621"></div><div style="flex:1;height:6px;background:#0E1621"></div></div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:0 28px 0 0">
 <p style="font-size:24px;font-weight:600;color:#B4530F">Apr 2025</p>
 <h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">DYNA-1</h3>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57">Dyna unveils a robot model built for commercial uptime</p>
 </div>
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:6px solid #0E1621;padding:28px 28px 0 0">
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:row;align-items:center"><div style="flex:none;width:32px;height:32px;border-radius:50%;background:#F4F2EC;border:6px solid #0E1621"></div><div style="flex:1;height:6px;background:#0E1621"></div></div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:0 28px 0 0">
 <p style="font-size:24px;font-weight:600;color:#B4530F">Jul 2025</p>
 <h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Amazon DeepFleet</h3>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57">Fleet model launches as Amazon passes 1M robots</p>
 </div>
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:6px solid #0E1621;padding:28px 28px 0 0">
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:row;align-items:center"><div style="flex:none;width:32px;height:32px;border-radius:50%;background:#F4F2EC;border:6px solid #0E1621"></div><div style="flex:1;height:6px;background:#0E1621"></div></div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:0 28px 0 0">
 <p style="font-size:24px;font-weight:600;color:#B4530F">Nov 2025</p>
 <h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">π*0.6</h3>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57">A VLA that learns from real-world experience</p>
 </div>
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:6px solid #0E1621;padding:28px 28px 0 0">
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:row;align-items:center"><div style="flex:none;width:32px;height:32px;border-radius:50%;background:#F4F2EC;border:6px solid #0E1621"></div><div style="flex:1;height:6px;background:#0E1621"></div></div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:0 28px 0 0">
 <p style="font-size:24px;font-weight:600;color:#B4530F">Mar 2026</p>
 <h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">NVIDIA GTC</h3>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57">Partner wave: KION, Foxconn, Skild, Data Factory</p>
 </div>
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:6px solid #F2994A;padding:28px 0 0 0">
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:row;align-items:center"><div style="flex:none;width:32px;height:32px;border-radius:50%;background:#F2994A;border:6px solid #F2994A"></div><div style="flex:1;height:6px;background:repeating-linear-gradient(90deg, #F2994A 0px, #F2994A 14px, transparent 14px, transparent 24px)"></div></div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:0 28px 0 0">
 <p style="font-size:24px;font-weight:600;color:#B4530F">Mid-2026</p>
 <h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Figure 03 at BMW</h3>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57">Humanoid at work on the Spartanburg plant floor</p>
+</div>
 </div>
 </div>
 <p style="font-size:32px;line-height:1.4;width:1500px;color:#3D4A57">In about two years, Physical AI went from first commercial contracts to <span style="color:#0E1621">fleet-scale use in warehouses</span> and humanoids on factory floors.</p>
@@ -287,32 +305,32 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:24px">
 <div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #F2994A;border-radius:12px;padding:28px">
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Amazon Robotics</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:30px;height:30px"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Amazon Robotics</h3></div>
 <p style="font-size:24px;font-weight:600;color:#B4530F">Fleet and manipulation</p>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57">DeepFleet coordinates 1M+ robots; Vulcan picks items with a sense of touch.</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #F2994A;border-radius:12px;padding:28px">
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Agility Digit × GXO</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:30px;height:30px"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a6 6 0 0 1 12 0v1M16 4a4 4 0 0 1 0 8M22 21v-1a6 6 0 0 0-4-5.6"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Agility Digit × GXO</h3></div>
 <p style="font-size:24px;font-weight:600;color:#B4530F">Logistics humanoid</p>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57">Multi-year robots-as-a-service deal; moving totes in Georgia, reportedly 100k+.</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #F2994A;border-radius:12px;padding:28px">
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Ultra</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:30px;height:30px"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Ultra</h3></div>
 <p style="font-size:24px;font-weight:600;color:#B4530F">E-commerce packing</p>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57">Live order packing running Physical Intelligence’s π0.6 model.</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #F2994A;border-radius:12px;padding:28px">
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Dyna Robotics</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:30px;height:30px"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Dyna Robotics</h3></div>
 <p style="font-size:24px;font-weight:600;color:#B4530F">Service robots</p>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57">Folding, food prep and packaging, about 16 hours a day at hotels and laundromats.</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #F2994A;border-radius:12px;padding:28px">
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">KION forklifts</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:30px;height:30px"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">KION forklifts</h3></div>
 <p style="font-size:24px;font-weight:600;color:#B4530F">With NVIDIA and Accenture</p>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57">Jetson-based autonomous forklifts for GXO, trained in warehouse digital twins.</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #F2994A;border-radius:12px;padding:28px">
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Waymo</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:30px;height:30px"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.2;color:#0E1621">Waymo</h3></div>
 <p style="font-size:24px;font-weight:600;color:#B4530F">Robotaxis</p>
 <p style="font-size:24px;line-height:1.4;color:#3D4A57">Driverless ride-hailing; the company describes an end-to-end foundation model.</p>
 </div>
@@ -426,17 +444,17 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 <div style="display:flex;flex-direction:row;gap:24px;align-items:stretch">
 <div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FBFAF6;border:1px solid #D9D4C7;border-radius:16px;padding:44px">
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">1X NEO</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:30px;height:30px"><path d="M3 11 12 3l9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">1X NEO</h3></div>
 <p style="font-size:24px;font-weight:600;color:#B4530F">Home humanoid</p>
 <p style="font-size:28px;line-height:1.45;color:#3D4A57">Pre-orders open with a $200 deposit. Deliveries were promised for 2026; none confirmed yet.</p>
 </div>
 <div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FBFAF6;border:1px solid #D9D4C7;border-radius:16px;padding:44px">
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">Unitree G1</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:30px;height:30px"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">Unitree G1</h3></div>
 <p style="font-size:24px;font-weight:600;color:#B4530F">Low-cost humanoid</p>
 <p style="font-size:28px;line-height:1.45;color:#3D4A57">Starts at $13,500. Sold mostly to research and development labs today.</p>
 </div>
 <div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#0E1621;border-radius:16px;padding:44px">
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#F4F2EC">Why homes are hardest</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#F2994A;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#0E1621;width:30px;height:30px"><path d="M12 3 2 21h20z"/><path d="M12 10v5M12 18h.01"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#F4F2EC">Why homes are hardest</h3></div>
 <ul style="font-size:28px;line-height:1.45;color:#B8C4CF">
 <li>Unstructured, ever-changing spaces</li>
 <li>People, children and pets nearby</li>
@@ -449,20 +467,22 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5F6B76;text-align:right">13</p>
 </section>
 
-<section id="business" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<section id="business" style="background:#F4F2EC;color:#0E1621;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:28px">
 <div style="display:flex;flex-direction:column;gap:16px">
 <p style="font-size:24px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#B4530F">Market dynamics</p>
 <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0E1621">Two business models are forming</h2>
 </div>
 <div style="display:flex;flex-direction:row;gap:24px">
-<div style="flex:1;display:flex;flex-direction:column;gap:24px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:8px solid #0E1621;border-radius:16px;padding:48px">
+<div style="flex:1;display:flex;flex-direction:column;gap:18px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:8px solid #0E1621;border-radius:16px;padding:32px 40px">
 <h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">Build the whole robot</h3>
 <p style="font-size:32px;font-weight:600;line-height:1.3;color:#0E1621">Figure, Tesla, 1X, Dyna</p>
+<div style="display:flex;flex-direction:column;gap:12px;border:2px dashed #0E1621;border-radius:12px;padding:18px"><div style="display:flex;flex-direction:row;gap:10px"><p style="flex:1;font-size:24px;font-weight:600;text-align:center;background:#E3D9C8;color:#0E1621;border-radius:8px;padding:10px 12px">Robot</p><p style="flex:1;font-size:24px;font-weight:600;text-align:center;background:#0E1621;color:#F4F2EC;border-radius:8px;padding:10px 12px">Model</p><p style="flex:1;font-size:24px;font-weight:600;text-align:center;background:#E3D9C8;color:#0E1621;border-radius:8px;padding:10px 12px">Data</p></div><p style="font-size:24px;text-align:center;color:#3D4A57">One company owns all three</p></div>
 <p style="font-size:28px;line-height:1.45;color:#3D4A57">Own the hardware, the model and the data loop. Tighter integration, but every robot is built in-house.</p>
 </div>
-<div style="flex:1;display:flex;flex-direction:column;gap:24px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:8px solid #F2994A;border-radius:16px;padding:48px">
+<div style="flex:1;display:flex;flex-direction:column;gap:18px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:8px solid #F2994A;border-radius:16px;padding:32px 40px">
 <h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">License the brain</h3>
 <p style="font-size:32px;font-weight:600;line-height:1.3;color:#0E1621">Physical Intelligence, Skild AI, NVIDIA GR00T, Dream Labs</p>
+<div style="display:flex;flex-direction:column;align-items:center;gap:10px;border:2px dashed #F2994A;border-radius:12px;padding:18px"><p style="font-size:24px;font-weight:600;background:#F2994A;color:#0E1621;border-radius:8px;padding:10px 40px">One model</p><svg aria-hidden="true" viewBox="0 0 50 100" preserveAspectRatio="none" style="flex:none;width:20px;height:32px"><polygon fill="#B4530F" points="15,0 35,0 35,60 50,60 25,100 0,60 15,60"/></svg><div style="align-self:stretch;display:flex;flex-direction:row;gap:10px"><p style="flex:1;font-size:24px;font-weight:600;text-align:center;background:#E3D9C8;color:#0E1621;border-radius:8px;padding:10px 12px">Maker A</p><p style="flex:1;font-size:24px;font-weight:600;text-align:center;background:#E3D9C8;color:#0E1621;border-radius:8px;padding:10px 12px">Maker B</p><p style="flex:1;font-size:24px;font-weight:600;text-align:center;background:#E3D9C8;color:#0E1621;border-radius:8px;padding:10px 12px">Maker C</p></div></div>
 <p style="font-size:28px;line-height:1.45;color:#3D4A57">One model across many robot makers. Scales faster, but depends on partners’ hardware and data.</p>
 </div>
 </div>
@@ -518,19 +538,19 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:48px 64px">
 <div style="display:flex;flex-direction:column;gap:12px;border-top:2px solid #0E1621;padding:24px 0 0 0">
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">Real-time control</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:30px;height:30px"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">Real-time control</h3></div>
 <p style="font-size:32px;line-height:1.35;color:#2B1A0C">Actions must arrive within milliseconds, on the robot, every time.</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:12px;border-top:2px solid #0E1621;padding:24px 0 0 0">
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">Cost of failure</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:30px;height:30px"><path d="M12 3 2 21h20z"/><path d="M12 10v5M12 18h.01"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">Cost of failure</h3></div>
 <p style="font-size:32px;line-height:1.35;color:#2B1A0C">A wrong action can damage equipment or injure people.</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:12px;border-top:2px solid #0E1621;padding:24px 0 0 0">
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">Data scarcity</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:30px;height:30px"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">Data scarcity</h3></div>
 <p style="font-size:32px;line-height:1.35;color:#2B1A0C">No internet-scale robot dataset exists; teleoperation and simulation fill the gap.</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:12px;border-top:2px solid #0E1621;padding:24px 0 0 0">
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">Sim-to-real gap</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:30px;height:30px"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#0E1621">Sim-to-real gap</h3></div>
 <p style="font-size:32px;line-height:1.35;color:#2B1A0C">Skills learned in simulation must survive real friction, lighting and wear.</p>
 </div>
 </div>
@@ -580,7 +600,7 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 <div style="display:flex;flex-direction:row;gap:24px">
 <div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #7FB7BE;border-radius:16px;padding:40px">
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">1 · Write the spec</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:30px;height:30px"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">1 · Write the spec</h3></div>
 <ul style="font-size:24px;line-height:1.45;color:#3D4A57">
 <li><b style="color:#0E1621">Scene envelope:</b> objects, lighting, clutter and how much they vary</li>
 <li><b style="color:#0E1621">Task metrics:</b> success rate, cycle time, units per hour</li>
@@ -590,7 +610,7 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </ul>
 </div>
 <div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #7FB7BE;border-radius:16px;padding:40px">
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">2 · Build the dataset</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:30px;height:30px"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">2 · Build the dataset</h3></div>
 <ul style="font-size:24px;line-height:1.45;color:#3D4A57">
 <li><b style="color:#0E1621">Teleoperation:</b> leader-follower arms (ALOHA, GELLO) or VR</li>
 <li><b style="color:#0E1621">Simulation:</b> Isaac Lab or MuJoCo with domain randomization</li>
@@ -925,7 +945,7 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 <div style="display:flex;flex-direction:row;gap:24px">
 <div style="flex:1;display:flex;flex-direction:column;gap:18px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #7FB7BE;border-radius:16px;padding:36px">
 <p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#22646B">Student or maker</p>
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">Learn by building</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:30px;height:30px"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">Learn by building</h3></div>
 <ul style="font-size:24px;line-height:1.45;color:#3D4A57">
 <li>Build a low-cost SO-101 arm and record demos with LeRobot</li>
 <li>Train ACT or SmolVLA on your own task</li>
@@ -934,7 +954,7 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 <div style="flex:1;display:flex;flex-direction:column;gap:18px;background:#FBFAF6;border:1px solid #D9D4C7;border-top:6px solid #F2994A;border-radius:16px;padding:36px">
 <p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#A04A0D">Robotics engineer</p>
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">Fine-tune a foundation model</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#0E1621;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F2994A;width:30px;height:30px"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#0E1621">Fine-tune a foundation model</h3></div>
 <ul style="font-size:24px;line-height:1.45;color:#3D4A57">
 <li>Fine-tune openpi (π0) or GR00T N on your own demos</li>
 <li>Evaluate in Isaac Lab or MuJoCo before hardware</li>
@@ -943,7 +963,7 @@ nav button:disabled { opacity: 0.35; cursor: default; }
 </div>
 <div style="flex:1;display:flex;flex-direction:column;gap:18px;background:#0E1621;border-radius:16px;padding:36px">
 <p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#F2994A">Company</p>
-<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#F4F2EC">Run one focused pilot</h3>
+<div style="display:flex;flex-direction:row;align-items:center;gap:16px"><div style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:#F2994A;border-radius:50%"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#0E1621;width:30px;height:30px"><path d="M4 20V10M10 20V4M16 20v-7M2 20h20"/></svg></div><h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:600;color:#F4F2EC">Run one focused pilot</h3></div>
 <ul style="font-size:24px;line-height:1.45;color:#B8C4CF">
 <li>Pick one structured, repetitive task with a clear metric</li>
 <li>Run it through the 8-stage loop in a time-boxed pilot</li>
