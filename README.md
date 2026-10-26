@@ -1,16 +1,16 @@
 # Physical AI in Production
 
-A 42-slide industry briefing, in six sections, (October 2026): where robot foundation models are shipping today, where they're still in pilots, how to take a model to production, and what to watch next.
+A 43-slide industry briefing, in six sections, (October 2026): where robot foundation models are shipping today, where they're still in pilots, how to take a model to production, and what to watch next.
 
 By **Lentin Joseph**, CEO of RUNTIME Robotics and author of 11 books on ROS and robotics.
 
 **View it:** https://runtimerobotics.github.io/physical-ai-in-production/
 
-Navigate with the arrow keys, the buttons at the bottom, or by swiping. Link to a slide with `#n`, for example `#10` for open VLA models or `#18` for the videos.
+Navigate with the arrow keys, the buttons at the bottom, or by swiping. Link to a slide with `#n`, for example `#11` for open VLA models or `#19` for the videos.
 
 ## Contents
 
-1. What Physical AI is, how a VLA model works, its three maturity levels, and a 2024–2026 timeline
+1. What Physical AI is, LLM vs. VLM vs. VLA, how a VLA model works, its three maturity levels, and a 2024–2026 timeline
 2. The models powering real robots (π0.6, DeepFleet, DYNA, Helix, Skild, GR00T, Gemini Robotics, Dream-1), a list of open VLAs you can download today with a release-timeline chart, and a Dream Labs Robot Playground demo
 3. Deployments: production, humanoid pilots, videos, home robots, and the race in China and India
 4. Business models, the enabling layer, and why it's harder than chatbots
